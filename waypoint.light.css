@@ -1,0 +1,270 @@
+@-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
+.topic-post.topic-owner article .row .topic-body .topic-meta-data .names .first:after {
+    content: 'OP';
+    background: var(--tertiary-low-or-tertiary-high);
+    margin: 0 4px 0 8px;
+    border-radius: 3px;
+    background-color: var(--tertiary-low-or-tertiary-high);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    height: 1.3rem;
+    width: 1.8rem;
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com") {
+html {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+body {
+    background: url(https://aws1.discourse-cdn.com/halowaypoint/original/1X/696fe3e….png),linear-gradient(180deg, transparent 0%, #eaecef 100%),linear-gradient(180deg, #f4f7f9 0%, #eceef1 100%)
+}
+
+a {
+    color: var(--tertiary-medium);
+}
+a:hover,
+a:focus {
+    color: var(--tertiary-high);
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    color: var(--secondary);
+}
+
+/* Navigation */
+.halo-custom-navigation-links-item a {
+    color: var(--primary-low);
+}
+.halo-custom-navigation-links-item a:focus,
+.halo-custom-navigation-links-item a:active,
+.halo-custom-navigation-links-item a:hover {
+    color: var(--primary-low-mid);
+}
+.halo-custom-navigation-links-item a.active {
+    color: var(--tertiary-medium);
+}
+.halo-breadcrumbs-categories-link {
+    color: var(--tertiary-low);
+}
+.halo-breadcrumbs-categories-link:not(:last-child)::after {
+    color: var(--secondary-low);
+}
+.halo-breadcrumbs-categories-current {
+    color: var(--secondary-low);
+}
+
+.alert.alert-info {
+    background-color: var(--tertiary-medium);
+}
+.alert.alert-info.clickable {
+    color: var(--primary);
+}
+
+
+/* Topics */
+.category-boxes h3 {
+    color: var(--secondary);
+}
+.category-boxes .subcategories .subcategory .badge-wrapper.none {
+    color: var(--primary-low);
+}
+.category-boxes .subcategories .subcategory .subcategory-description {
+    color: var(--secondary-very-high);
+}
+.topic-list-item:hover,
+.topic-list-item:active, 
+.topic-list-item:focus,
+.category-boxes .subcategories .subcategory:hover,
+.category-boxes .subcategories .subcategory:active,
+.category-boxes .subcategories .subcategory:focus {
+    background-color: rgba(0,0,0, 0.05);
+}
+
+.category-boxes .subcategories .subcategory:hover .badge-wrapper.none,
+.category-boxes .subcategories .subcategory:active .badge-wrapper.none,
+.category-boxes .subcategories .subcategory:focus .badge-wrapper.none {
+    color: var(--tertiary-high);
+}
+#topic-title h1 a {
+    color: var(--secondary);
+}
+
+.halo-topic-map {
+    background-color: rgba(0,0,0, 0.05);
+}
+.halo-topic-map-list-item-count {
+    color: var(--primary-low);
+}
+.halo-topic-map-list-item-description {
+    color: var(--secondary-low-mid);
+}
+
+.post-notice {
+    background-color: var(--tertiary-medium);
+    border-top: 1px solid var(--tertiary-low);
+    color: var(--primary);
+}
+.post-notice .d-icon {
+    color: var(--primary);
+}
+.names span a {
+    color: var(--primary-low);
+}
+
+.topic-list-main-link a.title, .topic-list .main-link a.title, .latest-topic-list-item .main-link a.title {
+    color: var(--secondary);
+}
+.badge-wrapper.none {
+    color: var(--secondary);
+}
+.badge-notification.unread-posts {
+    color: var(--primary);
+}
+
+.topic-list .topic-excerpt,
+table th,
+.topic-list td {
+    color: var(--primary-low);
+}
+
+.topic-list-item.visited a.title:not(.badge-notification), 
+.latest-topic-list-item.visited a.title:not(.badge-notification), 
+.category-topic-link.visited a.title:not(.badge-notification) {
+    color: var(--primary-low);
+}
+
+
+/* Badges*/
+.badge-card {
+    background-color: var(--primary-very-high);
+    border: 1px solid var(--secondary-low);
+}
+.badge-card .badge-contents .badge-link, 
+.badge-card .badge-contents .badge-info {
+        color: var(--secondary);
+}
+.badge-card .grant-count {
+    color: var(--primary-low-mid);
+}
+.badge-card .badge-contents .badge-icon.badge-type-bronze .fa {
+    color: var(--tertiary-medium) !important;
+}
+.badge-card .badge-contents .badge-icon.badge-type-silver .fa {
+    color: var(--primary-medium) !important;
+}
+.badge-card .badge-contents .badge-icon.badge-type-gold .fa {
+    color: var(--quaternary)!important;
+}
+
+#navigation-bar .navigation-toggle {
+    background-color: var(--primary-very-high);
+    border: 1px solid var(--secondary-medium);
+}
+.nav-pills>li>a {
+    color: var(--secondary);
+}
+.nav-pills>li>a:hover {
+    color: var(--tertiary-medium);
+    background-color:unset;
+}
+
+.select-kit.is-expanded .select-kit-body {
+    background: var(--primary-very-high);
+    border: 1px solid var(--primary-medium);
+    box-shadow: none;
+}
+.select-kit .select-kit-row.is-highlighted {
+    background: var(--tertiary-medium);
+}
+.select-kit .select-kit-row.is-highlighted .discourse-tag, 
+.select-kit .select-kit-row.is-highlighted .discourse-tag:visited, 
+.select-kit .select-kit-row.is-highlighted .discourse-tag:hover {
+    color: var(--primary);
+}
+.select-kit .select-kit-row .discourse-tag, 
+.select-kit .select-kit-row .discourse-tag:visited, 
+.select-kit .select-kit-row .discourse-tag:hover {
+    color: var(--secondary);
+}
+.select-kit .no-content, 
+.select-kit .is-loading, 
+.select-kit .results-count {
+    background: var(--primary-very-high);
+}
+.discourse-tag.bullet:before {
+    background: var(--tertiary-high);
+}
+.discourse-tag-count {
+    color: var(--secondary);
+}
+.select-kit .select-kit-row.is-highlighted .discourse-tag-count {
+        color: var(--primary);
+}
+
+.list-controls .combo-box .combo-box-header {
+    color: var(--secondary);
+    background-color: var(--primary-very-high);
+    border: 1px solid var(--secondary);
+}
+.nav-pills .drop {
+    background-color: var(--primary-very-high);
+    box-shadow: none;
+}
+.nav-pills .drop li a {
+    color: var(--secondary);
+}
+.nav-pills .drop li:hover,
+.nav-pills .drop li:active,
+.nav-pills .drop li:focus {
+    background-color: var(--tertiary-medium);
+}
+.nav-pills .drop li:hover a,
+.nav-pills .drop li:active a,
+.nav-pills .drop li:focus a {
+    color: var(--primary);
+}
+
+/* Butons */
+.btn {
+    color: var(--primary);
+    background: var(--tertiary-medium);
+}
+.btn:focus .d-icon,
+.btn .d-icon {
+    color: var(--primary);
+}
+.btn:active, 
+.btn.btn-active,
+.btn:hover,
+.btn:focus {
+    color: var(--primary);
+    background: unset;
+    background-color: var(--tertiary-low);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com") {
+.alert-emails-disabled { 
+    display: none;
+}
+.names span a {
+    font-size: 1.3rem;
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/c/") {
+.badge-notification.new-topic::before {
+    content: "New";
+    background: var(--tertiary-high);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    width: 2.4rem;
+    height: 1.2rem;
+    color: var(--primary);
+}
+}
