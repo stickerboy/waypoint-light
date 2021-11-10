@@ -461,15 +461,15 @@ blockquote {
 
 /* Badges*/
 .badge-card {
-    background-color: var(--primary-very-high);
-    border: 1px solid var(--secondary-low);
+    background-color: var(--primary);
+    border: 3px solid var(--tertiary-medium);
 }
 .badge-card .badge-contents .badge-link, 
 .badge-card .badge-contents .badge-info {
         color: var(--secondary);
 }
 .badge-card .grant-count {
-    color: var(--primary-low-mid);
+    color: var(--tertiary-low);
 }
 .badge-card .badge-contents .badge-icon.badge-type-bronze .fa {
     color: var(--tertiary-medium) !important;
@@ -480,7 +480,9 @@ blockquote {
 .badge-card .badge-contents .badge-icon.badge-type-gold .fa {
     color: var(--quaternary)!important;
 }
-
+.badge-card .favorite-btn {
+    border-radius: 0;
+}
 .badge-wrapper.none {
     color: var(--secondary);
 }
@@ -984,6 +986,127 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
 .user-menu .quick-access-panel .logout:hover {
     color: var(--primary); 
 }
+
+
+/* Profiles */
+.user-main .staff-counters>div span, 
+.user-main .staff-counters>div a span {
+    padding: 4px 10px 2px;
+    border-radius: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+.user-main .helpful-flags {
+    background-color: var(--tertiary-high);
+}
+
+.user-main .about .details {
+    background: rgba(var(--primary-rgb), 0.8);
+    border-bottom: 3px solid var(--tertiary-medium);
+    padding: 10px;
+}
+
+.user-main .about .details h1 .d-icon {
+    color: var(--quaternary);
+}
+.user-main .about .details .user-profile-names h3 {
+    font-weight: bold;
+    color: var(--quaternary);
+}
+.user-main .about .secondary {
+    border-top: 2px solid var(--tertiary-medium);
+}
+.user-main .about .secondary dd {
+    color: var(--tertiary-or-tertiary-low);
+}
+.user-main .about .secondary dl {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(140px, 1fr) );
+    grid-gap: 0.5em;
+}
+.user-main .about .secondary dt {
+    margin-left: 0 !important;
+    margin-right: 1em;
+}
+.user-main .about .secondary dd {
+    margin: 0;
+}
+.user-main .about .secondary dl div {
+    padding: 0.75em;
+}
+.user-main .about .secondary dl div:nth-of-type(6) {
+    order: 1;
+}
+
+.user-primary-navigation .nav-pills > li {
+    margin-right: 5px;
+}
+.user-primary-navigation .nav-pills > li a .d-icon {
+    margin-right: 5px;
+}
+.stats-section ul {
+    margin: 10px 0;
+    padding: 5px 15px;
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.stats-section .label {
+    color: var(--primary-low-mid-or-secondary-high);
+}
+.stats-section li.linked-stat a {
+    color: var(--tertiary-medium);
+}
+
+.top-sub-section li {
+    position: relative;
+    border-left: 3px solid var(--tertiary-medium);
+    background-color: var(--primary);
+    padding: 8px 10px;
+}
+.top-sub-section .topic-info {
+    color: var(--primary-low-mid-or-secondary-high);
+    font-weight: bold;
+}
+.top-sub-section li a {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+}
+.badge-notification.clicks {
+    font-weight: normal;
+    background-color: var(--tertiary-medium);
+    top: 4px;
+    right: 4px;
+    color: var(--primary);
+    position: absolute;
+    border-radius: 0;
+    padding: 0.4em 0.65em;
+    left: auto;
+    font-size: var(--font-down-1);
+}
+.links-section .domain {
+    color: var(--primary-low-mid-or-secondary-high);
+}
+.user-info .user-detail .name a, .user-info .user-detail .username a {
+    color: var(--tertiary-medium);
+}
+.summary-category-list {
+    width: 100%;
+}
+.top-categories-section table {
+    max-width: 95%;
+    width: 100%;
+}
+.summary-category-list tbody {
+    background-color: var(--primary);
+    border-top: 2px solid var(--tertiary-medium);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.top-categories-section table td, .top-categories-section table th {
+    padding: 0.75em 1em;
+}
+
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com") {
@@ -995,16 +1118,16 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
 }
 }
 
-@-moz-document url-prefix("https://forums.halowaypoint.com/c/") {
+@-moz-document url-prefix("https://forums.halowaypoint.com/c/"), url-prefix("https://forums.halowaypoint.com/categories") {
 .badge-notification.new-topic::before {
     content: "New";
     background: var(--tertiary-high);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 3px;
     width: 2.4rem;
-    height: 1.2rem;
+    height: 1.3rem;
     color: var(--primary);
 }
 }
