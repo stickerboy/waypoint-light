@@ -50,6 +50,11 @@ input[type="tel"], input[type="color"] {
 }
 textarea {
     background-color: var(--primary-very-high);
+    color: var(--secondary);
+}
+
+#main {
+    padding-bottom: 4em;
 }
 
 /* Navigation */
@@ -668,11 +673,33 @@ color: var(--primary);
     box-shadow: 0 8px 60px rgb(255 255 255 / 35%);
     border: 5px solid var(--tertiary-low-or-tertiary-high);
 }
+.modal-header {
+    border-bottom: 3px solid var(--tertiary-high);
+}
 .modal-footer {
     border-top: 2px solid var(--tertiary-low-or-tertiary-high);
 }
 .modal.has-tabs .modal-tabs .modal-tab.is-active.single-tab {
     color: var(--secondary);
+}
+
+.tap-tile-grid .tap-tile.active {
+    background-color: var(--tertiary-low-or-tertiary-high);
+    color: var(--primary);
+}
+.tap-tile-grid .tap-tile:first-child,
+.tap-tile-grid .tap-tile {
+    color: var(--secondary);
+    border-color: var(--primary-high);
+}
+.tap-tile-grid .tap-tile.active:hover,
+.tap-tile-grid .tap-tile.active:active,
+.tap-tile-grid .tap-tile.active:focus,
+.tap-tile-grid .tap-tile:hover,
+.tap-tile-grid .tap-tile:active,
+.tap-tile-grid .tap-tile:focus {
+    color: var(--primary);
+    background-color: var(--tertiary-low);
 }
 
 .select-kit.email-group-user-chooser .select-kit-row.email-group-user-chooser-row .identifier {
@@ -713,6 +740,249 @@ color: var(--primary);
 }
 .archetype-private_message .topic-map .participants .user {
     padding: 4px;
+}
+
+/* Review queues */
+.nav-pills {
+    display: flex; /* Fix odd positioning of the queue */
+}
+.nav-pills>li a.active {
+    color: var(--primary);
+}
+.nav-pills>li>a:hover {
+    background-color: var(--primary-low-mid-or-secondary-high);
+    color: var(--primary);
+}
+tr.reviewable-score {
+    align-items: center;
+}
+.reviewable-scores {
+    color: var(--secondary);
+}
+.reviewable-scores .user-flag-percentage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.user-flag-percentage .percentage-label{ 
+    margin-right: 0;
+}
+.user-flag-percentage .percentage-label.agreed,
+.user-flag-percentage .percentage-label.disagreed {
+    color: var(--primary);
+    padding: 2px 4px 2px 6px;
+}
+
+.user-flag-percentage .percentage-label.agreed+.d-icon,
+.user-flag-percentage .percentage-label.disagreed+.d-icon {
+    color: var(--primary);
+    padding: 6px;
+    display: flex;
+}
+.user-flag-percentage .percentage-label.agreed,
+.user-flag-percentage .percentage-label.agreed+.d-icon {
+    background-color: var(--success-hover);
+}
+.user-flag-percentage .percentage-label.disagreed,
+.user-flag-percentage .percentage-label.disagreed+.d-icon {
+    background-color: var(--danger-medium);
+}
+.reviewable-item {
+    padding: 2em 1em;
+    border-top: 3px solid var(--tertiary-low-or-tertiary-high);
+    background-color: var(--primary);
+    padding-bottom: 1em;
+}
+.reviewable-item .reviewable-meta-data {
+    font-size: var(--font-0);
+    color: var(--secondary);
+}
+.reviewable-item .reviewable-meta-data .d-icon {
+    font-size: var(--font-up-1);
+}
+span.category-name {
+    font-size: var(--font-up-1);
+}
+.list-tags {
+    display: flex;
+}
+.reviewable-scores tbody td.user a, 
+.reviewable-scores tbody td.reviewed-by a {
+    max-width: 140px;
+    overflow: visible;
+    white-space: nowrap;
+    text-overflow: initial;
+}
+.reviewable-filters {
+    background-color: var(--primary);
+    border-top: 3px solid var(--tertiary-low-or-tertiary-high);
+}
+.reviewable-topics {
+    background-color: var(--primary);
+}
+.reviewable-topics .reviewable-details .btn {
+    color: var(--primary);
+}
+
+table th {
+    padding: 0.85em;
+}
+.reviewable-topics tbody td {
+    padding: 0.85em;
+}
+
+/* Forum menu */
+.menu-panel {
+    background-color: var(--primary);
+}
+.hamburger-panel a.widget-link,
+.menu-panel .categories-link {
+    color: var(--secondary);
+}
+.menu-panel li.category-link a:hover .category-name, 
+.menu-panel li.category-link a:focus .category-name {
+    color: var(--tertiary-medium);
+}
+.menu-panel .widget-link:hover, 
+.menu-panel .widget-link:focus, 
+.menu-panel .categories-link:hover, 
+.menu-panel .categories-link:focus {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+}
+.menu-panel .widget-link:hover .widget-link .d-icon, 
+.menu-panel .widget-link:focus .widget-link .d-icon,
+.menu-panel .categories-link:hover .widget-link .d-icon, 
+.menu-panel .categories-link:focus .widget-link .d-icon,
+.menu-panel .widget-link:hover .categories-link .d-icon, 
+.menu-panel .widget-link:focus .categories-link .d-icon,
+.menu-panel .categoriesk:hover .categories-link .d-icon,
+.menu-panel .categories:focus .categories-link .d-icon {
+    color: var(--primary);
+}
+.panel-body .badge-notification.reviewables {
+    color: var(--primary);
+    border-radius: 0;
+    padding: 0.25em 0.42em 0.18em;
+}
+div.menu-links-header .menu-links-row button {
+    border-radius: 0;    
+    border: 1px solid var(--primary);
+    border-bottom: 1px solid var(--tertiary-medium);
+}
+div.menu-links-header .menu-links-row button.active,
+div.menu-links-header button:hover, div.menu-links-header button:focus {
+    background-color: var(--tertiary-medium);
+    border: 1px solid var(--tertiary-medium);
+}
+div.menu-links-header .menu-links-row button.active .fa,
+div.menu-links-header button:hover .fa, 
+div.menu-links-header button:focus .fa {
+    color: var(--primary);
+}
+div.menu-links-header .menu-links-row button.active:hover .fa {
+    color: var(--tertiary-medium);
+}
+
+
+.user-menu .quick-access-panel li:not(.show-all) {
+    padding: 6px 0px;
+}
+.user-menu .quick-access-panel .read {
+    background-color: var(--primary-very-high);
+}
+.user-menu .quick-access-panel li span:first-child {
+    color: var(--secondary);
+    font-weight: bold;
+}
+.user-menu .quick-access-panel li:not(.show-all) {
+    margin-bottom: 4px;
+}
+.menu-panel .panel-body-bottom .btn {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+}
+.menu-panel .panel-body-bottom .btn:hover {
+    background: var(--tertiary-high);
+    color: var(--primary);
+}
+
+.user-menu .quick-access-panel li.do-not-disturb .do-not-disturb-inner-container .do-not-disturb-label {
+    width: 100%;
+    justify-content: space-between;
+}
+.user-menu .quick-access-panel li.do-not-disturb .do-not-disturb-inner-container .relative-date {
+    text-align: left;
+    font-size: var(--font-0);
+    padding-top: 0px;
+    margin: 0;
+    color: var(--primary-medium);
+}
+.user-menu .quick-access-panel li.do-not-disturb {
+    background: var(--danger-low-mid);
+}
+.user-menu .quick-access-panel li.do-not-disturb .do-not-disturb-inner-container .d-icon-toggle-on {
+    color: var(--primary);
+}
+.user-menu .quick-access-panel li.do-not-disturb:hover,
+.user-menu .quick-access-panel li.do-not-disturb:active,
+.user-menu .quick-access-panel li.do-not-disturb:focus {
+    background: var(--danger-medium);
+}
+
+.user-menu .quick-access-panel li,
+.user-menu .quick-access-panel li a,
+.user-menu .quick-access-panel .read span:first-child {
+    transition: all 0.3s ease;
+}
+.user-menu .quick-access-panel li:not(.show-all).read .d-icon {
+    color: var(--tertiary-low-or-tertiary-high);
+}
+.user-menu .quick-access-panel li,
+.user-menu .quick-access-panel li a,
+.user-menu .quick-access-panel .d-icon, 
+.user-menu .quick-access-panel:hover .d-icon,
+.user-menu .quick-access-panel li.do-not-disturb .do-not-disturb-inner-container .do-not-disturb-label span {
+    color: var(--primary);
+}
+
+.user-menu .quick-access-panel li span:first-child {
+    color: var(--tertiary-hover);
+}
+.user-menu .quick-access-panel li:focus-within,
+.user-menu .quick-access-panel .read:hover {
+    background-color: var(--tertiary-low);
+    color: var(--primary);
+}
+
+.user-menu .quick-access-panel .read span:first-child {
+    color: var(--tertiary-low);
+}
+.user-menu .quick-access-panel li:focus-within span:first-child,
+.user-menu .quick-access-panel .read:hover span:first-child {
+    color: var(--tertiary-hover);
+}
+.user-menu .quick-access-panel li:focus-within a,
+.user-menu .quick-access-panel li:hover a {
+    color: var(--primary);
+}
+.user-menu .quick-access-panel .read a {
+    color: var(--secondary);
+}
+.user-menu .quick-access-panel li:hover {
+    background-color: var(--tertiary-low-or-tertiary-high);
+}
+.user-menu .quick-access-panel li:hover span:first-child {
+    color: var(--tertiary-low);
+}
+.user-menu .quick-access-panel.quick-access-profile li:not(.show-all) a,
+.user-menu .quick-access-panel .logout {
+    color: var(--secondary); 
+}
+.user-menu .quick-access-panel.quick-access-profile li:not(.show-all):hover a,
+.user-menu .quick-access-panel .logout:hover {
+    color: var(--primary); 
 }
 }
 
