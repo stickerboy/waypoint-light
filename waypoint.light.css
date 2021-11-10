@@ -1,15 +1,18 @@
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
 .topic-post.topic-owner article .row .topic-body .topic-meta-data .names .first:after {
     content: 'OP';
-    background: var(--tertiary-low-or-tertiary-high);
     margin: 0 4px 0 8px;
-    border-radius: 3px;
-    background-color: var(--tertiary-low-or-tertiary-high);
-    color: #fff;
     display: flex;
     justify-content: center;
-    height: 1.3rem;
-    width: 1.8rem;
+    align-items: baseline;
+    color: var(--primary);
+    background-color: var(--quaternary);
+    padding: 0;
+    border-radius: 0.25em;
+    font-weight: normal;
+    width: 1.6em;
+    height: 1.4em;
+    line-height: 1.5;
 }
 }
 
@@ -30,8 +33,23 @@ a:focus {
     color: var(--tertiary-high);
 }
 
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+input[type="text"], input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], input[type="color"] {
     color: var(--secondary);
+    background-color: var(--primary-very-high);
+}
+textarea {
+    background-color: var(--primary-very-high);
 }
 
 /* Navigation */
@@ -46,14 +64,24 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 .halo-custom-navigation-links-item a.active {
     color: var(--tertiary-medium);
 }
+.halo-breadcrumbs-categories {
+    font-size: var(--font-down-1);
+}
 .halo-breadcrumbs-categories-link {
-    color: var(--tertiary-low);
+    color: var(--tertiary-medium) !important;
 }
-.halo-breadcrumbs-categories-link:not(:last-child)::after {
-    color: var(--secondary-low);
-}
+.halo-breadcrumbs-categories-link:not(:last-child)::after,
 .halo-breadcrumbs-categories-current {
     color: var(--secondary-low);
+}
+
+.halo-hero .halo-custom-navigation-title,
+.halo-hero .halo-custom-navigation-links-item a {
+    color: var(--primary);
+}
+.halo-custom-navigation-title,
+.halo-custom-navigation-links-item a {
+    color: var(--secondary);
 }
 
 .alert.alert-info {
@@ -88,10 +116,18 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 .category-boxes .subcategories .subcategory:focus .badge-wrapper.none {
     color: var(--tertiary-high);
 }
+#topic-title .title-wrapper {
+    margin-top: 1em;
+}
 #topic-title h1 a {
     color: var(--secondary);
 }
-
+tr, .latest-topic-list-item {
+    border-bottom: 1px solid var(--primary-high);
+}
+tbody {
+    border-top: 2px solid var(--tertiary);
+}
 .halo-topic-map {
     background-color: rgba(0,0,0, 0.05);
 }
@@ -101,7 +137,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 .halo-topic-map-list-item-description {
     color: var(--secondary-low-mid);
 }
-
+.discourse-tag {
+    color: var(--tertiary-low);
+}
 .post-notice {
     background-color: var(--tertiary-medium);
     border-top: 1px solid var(--tertiary-low);
@@ -114,14 +152,28 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
     color: var(--primary-low);
 }
 
-.topic-list-main-link a.title, .topic-list .main-link a.title, .latest-topic-list-item .main-link a.title {
-    color: var(--secondary);
+.topic-meta-data .post-info a {
+    color: var(--tertiary-low);
+    font-weight: 600;
+    padding: 0.45em;
+    transition: color, background-color 0.3s ease;
 }
-.badge-wrapper.none {
-    color: var(--secondary);
-}
-.badge-notification.unread-posts {
+.topic-meta-data .post-info a:hover,
+.topic-meta-data .post-info a:focus, 
+.topic-meta-data .post-info a:active {
+    background-color: var(--tertiary-medium);
     color: var(--primary);
+}
+#share-link {
+    align-items: baseline;
+    background-color: var(--primary);
+    border: 2px solid var(--tertiary-low-or-tertiary-high);
+}
+
+.topic-list-main-link a.title, 
+.topic-list .main-link a.title, 
+.latest-topic-list-item .main-link a.title {
+    color: var(--secondary);
 }
 
 .topic-list .topic-excerpt,
@@ -134,6 +186,259 @@ table th,
 .latest-topic-list-item.visited a.title:not(.badge-notification), 
 .category-topic-link.visited a.title:not(.badge-notification) {
     color: var(--primary-low);
+}
+.filtered-replies-viewing {
+   color: var(--primary);
+}
+.nav.post-controls .actions button.create {
+    color: var(--secondary);
+}
+nav.post-controls .actions button {
+    border-radius: 0px;
+}
+nav.post-controls .actions button.create {
+    color: var(--secondary);
+}
+nav.post-controls .actions button.create:hover,
+nav.post-controls .actions button.create:focus,
+nav.post-controls .actions button.create:active {
+    color: var(--primary);
+}
+nav.post-controls .actions button.d-hover .d-icon, 
+nav.post-controls .actions button:focus .d-icon, 
+nav.post-controls .actions button:active .d-icon {
+    color: var(--primary);
+}
+
+.moderator .clearfix>.topic-meta-data>.names span.user-title a {
+    background-color: inherit;
+}
+.moderator .regular>.cooked {
+    background-color: var(--tertiary-high);
+    color: var(--primary);
+    font-size: var(--font-up-1);
+}
+
+.names span {
+    font-size: 20px;
+}
+.username.staff .svg-icon {
+    color: var(--quaternary);
+}
+.names .new_user a, .names .user-title, .names .user-title a {
+    color: var(--primary);
+    display: inline-flex;
+    align-items: baseline;
+    background-color: var(--quaternary);
+    padding: 0.1em 0.25em;
+    border-radius: 0.25em;
+    font-size: 1.05em;
+}
+
+.moderator .regular>.cooked::before {
+    content: "Highlighted";
+    position: relative;
+    top: -8px;
+    right: 0;
+    background-color: var(--tertiary);
+    padding: 6px;
+    border: 1px solid var(--tertiary-very-high);
+}
+
+.topic-map {
+    background: var(--primary);
+    border: 1px solid var(--tertiary-medium);
+}
+.topic-map .buttons .btn {
+    border-left: 1px solid var(--tertiary-medium);
+    background: var(--tertiary-medium);
+    border-radius: 0;
+}
+.topic-map .buttons .btn:hover {
+    background: var(--tertiary-low)
+}
+.topic-map .map button .d-icon, 
+.topic-map .map button:hover .d-icon {
+    color: var(--primary);
+    border-radius: 0;
+}
+.topic-map section {
+    border-top: 0;
+}
+.topic-map .map {
+    border: 2px solid var(--tertiary-medium);
+}
+.topic-map .map + .topic-map-expanded {
+    border: 2px solid var(--tertiary-medium);
+    border-top: 0;
+}
+.topic-map h3,
+.topic-map h4 {
+    color: var(--tertiary-low);
+}
+.topic-map .map .number {
+    color: var(--tertiary-medium);
+}
+
+.small-action.topic-post-visited .topic-post-visited-line .topic-post-visited-message,
+.topic-list .topic-list-item-separator td span {
+    background-color: var(--danger-low-mid);
+    color: var(--primary);
+    font-size: var(--font-up-1);
+    padding: 2px 8px;
+    font-weight: bold;
+}
+.small-action {
+    color: var(--secondary);
+    background-color: var(--primary-very-high);
+    border-top: 1px solid var(--primary-high-or-secondary-low);
+}
+.small-action .small-action-desc.timegap {
+    color: var(--secondary);
+}
+.small-action.deleted .small-action-desc,
+.small-action.deleted .topic-avatar .d-icon {
+    color: var(--primary);
+}
+.small-action .btn,
+.small-action .btn .d-icon {
+    color: var(--secondary-high);
+}
+.small-action .btn:hover .d-icon,
+.small-action .btn:focus .d-icon,
+.small-action .btn:active .d-icon {
+    color: var(--primary);
+}
+
+#reply-control {
+    background-color: var(--primary);
+}
+.select-kit.combo-box .select-kit-header,
+.select-kit.multi-select .multi-select-header,
+.d-editor-textarea-wrapper {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.d-editor-textarea-wrapper textarea {
+    color: var(--secondary);
+}
+
+.select-kit.combo-box.category-chooser .select-kit-row .category-name {
+    font-size: var(--font-0);
+    font-weight: bold;
+}
+.select-kit.combo-box.category-chooser .select-kit-row .topic-count {
+    font-weight: bold;
+    color: var(--tertiary-low);
+}
+.select-kit.combo-box.category-chooser .select-kit-row .category-desc {
+    color: var(--secondary);
+}
+.select-kit .select-kit-row.is-highlighted .category-name,
+.select-kit .select-kit-row.is-highlighted .topic-count {
+    color: var(--primary);
+    font-weight: bold;
+}
+.select-kit .select-kit-row.is-highlighted .d-icon {
+    color: var(--primary);
+}
+.select-kit.combo-box.category-chooser .select-kit-row.is-highlighted .category-desc,
+.select-kit.combo-box.category-chooser .select-kit-row.is-highlighted .topic-count,
+.select-kit.combo-box.timezone-input .select-kit-row.is-highlighted {
+    color: var(--primary);
+}
+.select-kit .select-kit-row.is-selected {
+    background-color: var(--tertiary-med-or-tertiary);
+}
+.d-editor-button-bar .btn {
+    border-radius: 0;
+}
+.d-editor-button-bar .btn:hover {
+    color: var(--primary);
+}
+
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.is-filled .date-time, 
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.is-selected .date-time,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control .date-time {
+    background: var(--primary);
+    color: var(--secondary);
+}
+#reply-control .reply-to .composer-controls .btn {
+    border-radius: 0;
+}
+
+#topic-footer-buttons .pinned-button .reason,
+#topic-footer-buttons .topic-notifications-button .reason {
+    color: var(--tertiary-low);
+}
+
+.fullscreen-composer #reply-control.fullscreen:before {
+    background-color: var(--primary-very-high);
+}
+
+
+/* Quotes */
+aside.quote .title {
+    border-left: 5px solid var(--tertiary-medium);
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    font-weight: bold;
+    padding: 12px 12px 6px 12px;
+}
+blockquote {
+    color: var(--secondary-very-high);
+    background-color: var(--primary);
+    border-left: 5px solid var(--tertiary-medium);
+}
+.quote-controls, .quote-controls .d-icon {
+    color: var(--primary);
+}
+.quote-controls a:focus {
+    background-color: var(--tertiary-low);
+}
+
+/* Deleted post */
+.deleted .regular>.cooked {
+   color: var(--primary);
+}
+.deleted .topic-meta-data:not(.embedded-reply),
+.deleted nav.post-controls .d-icon,
+.deleted nav.post-controls .show-replies, .deleted nav.post-controls button.reply.create,
+.deleted nav.post-controls .show-replies .d-icon, .deleted nav.post-controls button.reply.create .d-icon,
+.deleted .post-action{
+    color: var(--danger-medium);
+}
+.deleted nav.post-controls .widget-button:hover,
+.deleted nav.post-controls button.reply.create:hover,
+.deleted nav.post-controls button.reply.create:hover .d-icon{
+    color: var(--primary);
+}
+
+
+.gap {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    width: calc(100% - 0.5em - 24px);
+    padding: 0.5em;
+    text-align: center;
+} 
+.gap:hover,
+.gap:focus,
+.gap:active {
+    background-color: var(--tertiary-low);
+}
+
+
+.select-kit.single-select.dropdown-select-box .select-kit-row.is-highlighted .texts .name,
+.select-kit.single-select.dropdown-select-box .select-kit-row.is-selected .texts .name,
+.select-kit.single-select.dropdown-select-box .select-kit-row.is-highlighted .texts .desc,
+.select-kit.single-select.dropdown-select-box .select-kit-row.is-selected .texts .desc{
+    color: var(--primary);
+}
+.select-kit.single-select.dropdown-select-box .select-kit-row .texts .name,
+.select-kit.single-select.dropdown-select-box .select-kit-row .texts .desc {
+    color: var(--secondary);
 }
 
 
@@ -158,6 +463,15 @@ table th,
 .badge-card .badge-contents .badge-icon.badge-type-gold .fa {
     color: var(--quaternary)!important;
 }
+
+.badge-wrapper.none {
+    color: var(--secondary);
+}
+.badge-notification.unread-posts {
+    color: var(--primary);
+}
+
+
 
 #navigation-bar .navigation-toggle {
     background-color: var(--primary-very-high);
@@ -194,6 +508,9 @@ table th,
 .select-kit .results-count {
     background: var(--primary-very-high);
 }
+.select-kit .select-kit-row.is-highlighted .name {
+color: var(--primary);
+}
 .discourse-tag.bullet:before {
     background: var(--tertiary-high);
 }
@@ -201,7 +518,82 @@ table th,
     color: var(--secondary);
 }
 .select-kit .select-kit-row.is-highlighted .discourse-tag-count {
-        color: var(--primary);
+    color: var(--primary);
+}
+
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.to .date-time,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.to,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.from,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.from .date-time,
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control .delete-to-date {
+    border-radius: 0;
+}
+.discourse-local-dates-create-modal .form .date-time-configuration .picker-panel {
+    background: var(--tertiary-medium);
+}
+.discourse-local-dates-create-modal .picker-panel {
+    border: 1px solid var(--tertiary-medium);
+}
+.pika-single {
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 1px solid var(--tertiary-medium);
+    border-bottom-color: var(--tertiary-medium);
+}
+.pika-label {
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+.pika-table th {
+    color: var(--tertiary-low);
+}
+.pika-button {
+    border-radius: 0;
+    background: var(--tertiary-medium);
+}
+.is-selected .pika-button {
+    color: var(--tertiary-low);
+    background: var(--tertiary);
+}
+.pika-button:hover {
+    border-radius: 0;
+}
+.is-disabled .pika-button, 
+.is-outside-current-month .pika-button {
+    color: var(--secondary);
+    opacity: 1;
+    background-color: var(--tertiary-or-white);
+}
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.is-filled .d-icon, 
+.discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.is-selected .d-icon {
+    color: var(--primary);
+}
+.discourse-local-dates-create-modal .form .date-time-configuration .time-pickers .d-icon {
+    color: var(--primary);
+}
+
+.canned-reply-title:hover {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+}
+.canned-replies-content {
+    background: var(--primary-very-high);
+}
+
+.poll-ui-builder .poll-type .poll-type-value.active {
+    color: var(--primary);
+}
+.poll-ui-builder .input-group input[type="number"], 
+.poll-ui-builder .input-group input[type="text"], 
+.poll-ui-builder .input-group input[type="time"], 
+.poll-ui-builder .input-group .combo-box, 
+.poll-ui-builder .input-group .multi-select, 
+.poll-ui-builder .input-group .select-kit-header, 
+.poll-ui-builder .input-group .date-picker-wrapper {
+    margin-bottom: 0;
+}
+.poll-ui-builder .poll-options .poll-option-value {
+    margin-bottom: 9px;
 }
 
 .list-controls .combo-box .combo-box-header {
@@ -243,6 +635,72 @@ table th,
     color: var(--primary);
     background: unset;
     background-color: var(--tertiary-low);
+}
+.discourse-local-dates-create-modal-footer .cancel-action {
+    color: var(--tertiary-low);
+}
+
+.boxed.white {
+    background-color: rgba(0,0,0, 0.05);
+}
+
+.reviewable-item .post-topic .title-text {
+    color: var(--secondary);
+}
+
+.modal-backdrop {
+    background-color: var(--tertiary-low);
+}
+.modal-inner-container {
+    background-color: var(--primary);
+    box-shadow: 0 8px 60px rgb(255 255 255 / 35%);
+    border: 5px solid var(--tertiary-low-or-tertiary-high);
+}
+.modal-footer {
+    border-top: 2px solid var(--tertiary-low-or-tertiary-high);
+}
+.modal.has-tabs .modal-tabs .modal-tab.is-active.single-tab {
+    color: var(--secondary);
+}
+
+.select-kit.email-group-user-chooser .select-kit-row.email-group-user-chooser-row .identifier {
+    color: var(--secondary);
+}
+.select-kit.email-group-user-chooser .select-kit-row.is-highlighted.email-group-user-chooser-row .identifier {
+    color: var(--primary);
+}
+
+
+/* PMs */
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked {
+    background: var(--tertiary-medium);
+    color: var(--primary);
+    font-size: var(--font-up-1);
+}
+.archetype-private_message .topic-body .cooked {
+    font-size: var(--font-up-1);
+    background-color: var(--primary-very-high);
+}
+.archetype-private_message .topic-map,
+.archetype-private_message .topic-body .cooked,
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked,
+.archetype-private_message .topic-map .participants .user,
+.archetype-private_message .map:first-of-type .buttons .btn {
+    border-radius: 0; 
+}
+.topic-map .participants .user .user-link, 
+.topic-map .participants .user .group-link {
+    color: var(--secondary);
+}
+.archetype-private_message .topic-map .participants .user {
+    background-color: var(--primary-very-high);
+}
+.topic-map .participants .user .user-link:hover, 
+.topic-map .participants .user .group-link:hover {
+    color: var(--primary-low-mid);
+}
+.archetype-private_message .topic-map .participants .user {
+    padding: 4px;
 }
 }
 
