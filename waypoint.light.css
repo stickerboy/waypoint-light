@@ -1,22 +1,3 @@
-@-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
-.topic-post.topic-owner article .row .topic-body .topic-meta-data .names .first:after {
-    content: 'OP';
-    margin: 0 4px 0 8px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    color: var(--primary);
-    background-color: var(--quaternary);
-    padding: 0;
-    border-radius: 0.25em;
-    font-weight: normal;
-    width: 1.6em;
-    height: 1.4em;
-    line-height: 1.5;
-}
-}
-
-@-moz-document url-prefix("https://forums.halowaypoint.com") {
 html {
     background-color: var(--primary);
     color: var(--secondary);
@@ -397,6 +378,18 @@ blockquote {
 .quote-controls a:focus {
     background-color: var(--tertiary-low);
 }
+.quote aside .quote, 
+.quote aside .title, 
+.quote aside blockquote, 
+.quote aside .onebox, 
+.quote aside .onebox-result {
+    background: var(--primary-very-high);
+    border-left: 5px solid var(--tertiary-medium);
+    color: var(--tertiary-low);
+}
+.quote aside.quote .quote-controls .d-icon {
+    color: var(--tertiary-low);
+}
 
 /* Deleted post */
 .deleted .regular>.cooked {
@@ -701,28 +694,4 @@ color: var(--primary);
 }
 .archetype-private_message .topic-map .participants .user {
     padding: 4px;
-}
-}
-
-@-moz-document url-prefix("https://forums.halowaypoint.com") {
-.alert-emails-disabled { 
-    display: none;
-}
-.names span a {
-    font-size: 1.3rem;
-}
-}
-
-@-moz-document url-prefix("https://forums.halowaypoint.com/c/") {
-.badge-notification.new-topic::before {
-    content: "New";
-    background: var(--tertiary-high);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    width: 2.4rem;
-    height: 1.2rem;
-    color: var(--primary);
-}
 }
