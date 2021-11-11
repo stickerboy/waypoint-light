@@ -1,22 +1,5 @@
-@-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
-.topic-post.topic-owner article .row .topic-body .topic-meta-data .names .first:after {
-    content: 'OP';
-    margin: 0 4px 0 8px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    color: var(--primary);
-    background-color: var(--quaternary);
-    padding: 0;
-    border-radius: 0.25em;
-    font-weight: normal;
-    width: 1.6em;
-    height: 1.4em;
-    line-height: 1.5;
-}
-}
-
-@-moz-document url-prefix("https://forums.halowaypoint.com") {
+@-moz-document url-prefix("https://forums.halowaypoint.com/") {
+/* Global styling */
 html {
     background-color: var(--primary);
     color: var(--secondary);
@@ -55,6 +38,10 @@ textarea {
 
 #main {
     padding-bottom: 4em;
+}
+
+.empty-state {
+    color: var(--secondary);
 }
 
 /* Navigation */
@@ -98,29 +85,38 @@ textarea {
 
 
 /* Topics */
-.category-boxes h3 {
+.category-boxes h3,
+[class*='category-'] .topic-list .halo-category-sidebar-list-link-item-header {
     color: var(--secondary);
+}
+.category-boxes .subcategories {
+    grid-gap: 5px;
 }
 .category-boxes .subcategories .subcategory .badge-wrapper.none {
     color: var(--primary-low);
 }
-.category-boxes .subcategories .subcategory .subcategory-description {
+.category-boxes .subcategories .subcategory .subcategory-description,
+[class*='category-'] .topic-list .halo-category-sidebar-list-link-item-description {
     color: var(--secondary-very-high);
+    font-size: var(--font-0);
 }
 .topic-list-item:hover,
 .topic-list-item:active, 
 .topic-list-item:focus,
 .category-boxes .subcategories .subcategory:hover,
 .category-boxes .subcategories .subcategory:active,
-.category-boxes .subcategories .subcategory:focus {
+.category-boxes .subcategories .subcategory:focus,
+[class*='category-'] .topic-list .halo-category-sidebar-list-link:hover {
     background-color: rgba(0,0,0, 0.05);
 }
 
 .category-boxes .subcategories .subcategory:hover .badge-wrapper.none,
 .category-boxes .subcategories .subcategory:active .badge-wrapper.none,
-.category-boxes .subcategories .subcategory:focus .badge-wrapper.none {
+.category-boxes .subcategories .subcategory:focus .badge-wrapper.none,
+[class*='category-'] .topic-list .halo-category-sidebar-list-link:hover .halo-category-sidebar-list-link-item-header {
     color: var(--tertiary-high);
 }
+
 #topic-title .title-wrapper {
     margin-top: 1em;
 }
@@ -131,8 +127,16 @@ tr, .latest-topic-list-item {
     border-bottom: 1px solid var(--primary-high);
 }
 tbody {
-    border-top: 2px solid var(--tertiary);
+    background-color: var(--primary);
+    border-top: 2px solid var(--tertiary-medium);
+    border-bottom: 3px solid var(--tertiary-medium);
 }
+.topic-list-item.visited span.badge-category, 
+.latest-topic-list-item.visited span.badge-category, 
+.category-topic-link.visited span.badge-category {
+    color: var(--tertiary-medium);
+}
+
 .halo-topic-map {
     background-color: rgba(0,0,0, 0.05);
 }
@@ -145,16 +149,28 @@ tbody {
 .discourse-tag {
     color: var(--tertiary-low);
 }
-.post-notice {
-    background-color: var(--tertiary-medium);
-    border-top: 1px solid var(--tertiary-low);
-    color: var(--primary);
-}
-.post-notice .d-icon {
-    color: var(--primary);
-}
+
 .names span a {
     color: var(--primary-low);
+}
+.first.new-user:not(.staff) a {
+    color: var(--tertiary-medium);
+}
+.first.new-user:not(.staff) {
+    position: relative;
+    overflow: visible;
+}
+
+a.mention {
+    color: var(--primary);
+    padding: 2px 6px 0px;
+    background: var(--tertiary-low);
+    border-radius: 3px;
+}
+a.mention:hover,
+a.mention:focus,
+a.mention:active {
+    background-color: var(--tertiary-medium);
 }
 
 .topic-meta-data .post-info a {
@@ -192,6 +208,10 @@ table th,
 .category-topic-link.visited a.title:not(.badge-notification) {
     color: var(--primary-low);
 }
+.suggested-topics-message a {
+    color: var(--tertiary-medium);
+}
+
 .filtered-replies-viewing {
    color: var(--primary);
 }
@@ -230,14 +250,25 @@ nav.post-controls .actions button:active .d-icon {
 .username.staff .svg-icon {
     color: var(--quaternary);
 }
-.names .new_user a, .names .user-title, .names .user-title a {
-    color: var(--primary);
-    display: inline-flex;
+.names span {
+    margin-right: 0;
+}
+.names .new_user a, 
+.names .user-title, 
+.names .user-title a {
+    margin: 0 6px;
+    display: flex;
+    justify-content: center;
     align-items: baseline;
+    color: var(--primary);
     background-color: var(--quaternary);
-    padding: 0.1em 0.25em;
+    padding: 0;
     border-radius: 0.25em;
-    font-size: 1.05em;
+    font-weight: normal;
+    width: auto;
+    height: 1.4em;
+    line-height: 1.5;
+    font-size: var(--font-0);
 }
 
 .moderator .regular>.cooked::before {
@@ -248,6 +279,7 @@ nav.post-controls .actions button:active .d-icon {
     background-color: var(--tertiary);
     padding: 6px;
     border: 1px solid var(--tertiary-very-high);
+    border-radius: 3px;
 }
 
 .topic-map {
@@ -290,34 +322,26 @@ nav.post-controls .actions button:active .d-icon {
     background-color: var(--danger-low-mid);
     color: var(--primary);
     font-size: var(--font-up-1);
-    padding: 2px 8px;
+    padding: 6px 8px;
     font-weight: bold;
+    border-radius: 3px;
 }
-.small-action {
-    color: var(--secondary);
-    background-color: var(--primary-very-high);
-    border-top: 1px solid var(--primary-high-or-secondary-low);
+
+
+
+
+p > code,
+li > code,
+pre > code {
+    background: var(--tertiary-low);
+    padding: 0 4px;
 }
-.small-action .small-action-desc.timegap {
-    color: var(--secondary);
-}
-.small-action.deleted .small-action-desc,
-.small-action.deleted .topic-avatar .d-icon {
-    color: var(--primary);
-}
-.small-action .btn,
-.small-action .btn .d-icon {
-    color: var(--secondary-high);
-}
-.small-action .btn:hover .d-icon,
-.small-action .btn:focus .d-icon,
-.small-action .btn:active .d-icon {
-    color: var(--primary);
-}
+
 
 #reply-control {
     background-color: var(--primary);
 }
+
 .select-kit.combo-box .select-kit-header,
 .select-kit.multi-select .multi-select-header,
 .d-editor-textarea-wrapper {
@@ -383,70 +407,6 @@ nav.post-controls .actions button:active .d-icon {
 }
 
 
-/* Quotes */
-aside.quote .title {
-    border-left: 5px solid var(--tertiary-medium);
-    background-color: var(--tertiary-medium);
-    color: var(--primary);
-    font-weight: bold;
-    padding: 12px 12px 6px 12px;
-}
-blockquote {
-    color: var(--secondary-very-high);
-    background-color: var(--primary);
-    border-left: 5px solid var(--tertiary-medium);
-}
-.quote-controls, .quote-controls .d-icon {
-    color: var(--primary);
-}
-.quote-controls a:focus {
-    background-color: var(--tertiary-low);
-}
-.quote aside .quote, 
-.quote aside .title, 
-.quote aside blockquote, 
-.quote aside .onebox, 
-.quote aside .onebox-result {
-    background: var(--primary-very-high);
-    border-left: 5px solid var(--tertiary-medium);
-    color: var(--tertiary-low);
-}
-.quote aside.quote .quote-controls .d-icon {
-    color: var(--tertiary-low);
-}
-
-/* Deleted post */
-.deleted .regular>.cooked {
-   color: var(--primary);
-}
-.deleted .topic-meta-data:not(.embedded-reply),
-.deleted nav.post-controls .d-icon,
-.deleted nav.post-controls .show-replies, .deleted nav.post-controls button.reply.create,
-.deleted nav.post-controls .show-replies .d-icon, .deleted nav.post-controls button.reply.create .d-icon,
-.deleted .post-action{
-    color: var(--danger-medium);
-}
-.deleted nav.post-controls .widget-button:hover,
-.deleted nav.post-controls button.reply.create:hover,
-.deleted nav.post-controls button.reply.create:hover .d-icon{
-    color: var(--primary);
-}
-
-
-.gap {
-    background-color: var(--tertiary-medium);
-    color: var(--primary);
-    width: calc(100% - 0.5em - 24px);
-    padding: 0.5em;
-    text-align: center;
-} 
-.gap:hover,
-.gap:focus,
-.gap:active {
-    background-color: var(--tertiary-low);
-}
-
-
 .select-kit.single-select.dropdown-select-box .select-kit-row.is-highlighted .texts .name,
 .select-kit.single-select.dropdown-select-box .select-kit-row.is-selected .texts .name,
 .select-kit.single-select.dropdown-select-box .select-kit-row.is-highlighted .texts .desc,
@@ -459,55 +419,31 @@ blockquote {
 }
 
 
-/* Badges*/
-.badge-card {
-    background-color: var(--primary);
-    border: 3px solid var(--tertiary-medium);
-}
-.badge-card .badge-contents .badge-link, 
-.badge-card .badge-contents .badge-info {
-        color: var(--secondary);
-}
-.badge-card .grant-count {
-    color: var(--tertiary-low);
-}
-.badge-card .badge-contents .badge-icon.badge-type-bronze .fa {
-    color: var(--tertiary-medium) !important;
-}
-.badge-card .badge-contents .badge-icon.badge-type-silver .fa {
-    color: var(--primary-medium) !important;
-}
-.badge-card .badge-contents .badge-icon.badge-type-gold .fa {
-    color: var(--quaternary)!important;
-}
-.badge-card .favorite-btn {
-    border-radius: 0;
-}
 .badge-wrapper.none {
     color: var(--secondary);
 }
 .badge-notification.unread-posts {
     color: var(--primary);
+    background-color: var(--tertiary-high);
+    font-weight: bold;
+    border-radius: 0;
 }
-
 
 
 #navigation-bar .navigation-toggle {
     background-color: var(--primary-very-high);
     border: 1px solid var(--secondary-medium);
 }
-.nav-pills>li>a {
-    color: var(--secondary);
-}
-.nav-pills>li>a:hover {
-    color: var(--tertiary-medium);
-    background-color:unset;
-}
 
+
+/* Post creation */
 .select-kit.is-expanded .select-kit-body {
     background: var(--primary-very-high);
     border: 1px solid var(--primary-medium);
     box-shadow: none;
+}
+#reply-control .reply-to .composer-action-title .action-title {
+    color: var(--secondary);
 }
 .select-kit .select-kit-row.is-highlighted {
     background: var(--tertiary-medium);
@@ -538,6 +474,9 @@ color: var(--primary);
 }
 .select-kit .select-kit-row.is-highlighted .discourse-tag-count {
     color: var(--primary);
+}
+#reply-control .save-or-cancel .cancel{
+    color: var(--danger-medium);
 }
 
 .discourse-local-dates-create-modal .form .date-time-configuration .date-time-control.to .date-time,
@@ -620,6 +559,32 @@ color: var(--primary);
     background-color: var(--primary-very-high);
     border: 1px solid var(--secondary);
 }
+.nav-pills {
+    display: flex; /* Fix odd positioning of the queue */
+}
+.nav-pills > li > a {
+    color: var(--secondary);
+    margin-right: 5px;
+}
+.nav-pills > li a.active {
+    color: var(--primary);
+}
+.nav-pills > li > a:hover {
+    background-color: var(--primary-low-mid-or-secondary-high);
+    color: var(--primary);
+}
+/* 
+.nav-pills > li > a {
+    color: var(--secondary);
+}
+.nav-pills > li > a.active {
+    color: var(--primary);
+}
+.nav-pills > li > a:hover {
+    color: var(--tertiary-medium);
+    background-color:unset;
+} */
+
 .nav-pills .drop {
     background-color: var(--primary-very-high);
     box-shadow: none;
@@ -663,10 +628,8 @@ color: var(--primary);
     background-color: rgba(0,0,0, 0.05);
 }
 
-.reviewable-item .post-topic .title-text {
-    color: var(--secondary);
-}
 
+/* Modals */
 .modal-backdrop {
     background-color: var(--tertiary-low);
 }
@@ -684,7 +647,16 @@ color: var(--primary);
 .modal.has-tabs .modal-tabs .modal-tab.is-active.single-tab {
     color: var(--secondary);
 }
+.bootbox.modal {
+    background-color: var(--primary);
+    box-shadow: 0 8px 60px rgb(255 255 255 / 25%);
+    border: 5px solid var(--tertiary-low-or-tertiary-high);
+}
+.bootbox.modal .modal-footer a.btn-primary {
+    color: var(--primary);
+}
 
+/* Tile grid */
 .tap-tile-grid .tap-tile.active {
     background-color: var(--tertiary-low-or-tertiary-high);
     color: var(--primary);
@@ -712,97 +684,6 @@ color: var(--primary);
 }
 
 
-/* PMs */
-.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked {
-    background: var(--tertiary-medium);
-    color: var(--primary);
-    font-size: var(--font-up-1);
-}
-.archetype-private_message .topic-body .cooked {
-    font-size: var(--font-up-1);
-    background-color: var(--primary-very-high);
-}
-.archetype-private_message .topic-map,
-.archetype-private_message .topic-body .cooked,
-.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked,
-.archetype-private_message .topic-map .participants .user,
-.archetype-private_message .map:first-of-type .buttons .btn {
-    border-radius: 0; 
-}
-.topic-map .participants .user .user-link, 
-.topic-map .participants .user .group-link {
-    color: var(--secondary);
-}
-.archetype-private_message .topic-map .participants .user {
-    background-color: var(--primary-very-high);
-}
-.topic-map .participants .user .user-link:hover, 
-.topic-map .participants .user .group-link:hover {
-    color: var(--primary-low-mid);
-}
-.archetype-private_message .topic-map .participants .user {
-    padding: 4px;
-}
-
-/* Review queues */
-.nav-pills {
-    display: flex; /* Fix odd positioning of the queue */
-}
-.nav-pills>li a.active {
-    color: var(--primary);
-}
-.nav-pills>li>a:hover {
-    background-color: var(--primary-low-mid-or-secondary-high);
-    color: var(--primary);
-}
-tr.reviewable-score {
-    align-items: center;
-}
-.reviewable-scores {
-    color: var(--secondary);
-}
-.reviewable-scores .user-flag-percentage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-}
-.user-flag-percentage .percentage-label{ 
-    margin-right: 0;
-}
-.user-flag-percentage .percentage-label.agreed,
-.user-flag-percentage .percentage-label.disagreed {
-    color: var(--primary);
-    padding: 2px 4px 2px 6px;
-}
-
-.user-flag-percentage .percentage-label.agreed+.d-icon,
-.user-flag-percentage .percentage-label.disagreed+.d-icon {
-    color: var(--primary);
-    padding: 6px;
-    display: flex;
-}
-.user-flag-percentage .percentage-label.agreed,
-.user-flag-percentage .percentage-label.agreed+.d-icon {
-    background-color: var(--success-hover);
-}
-.user-flag-percentage .percentage-label.disagreed,
-.user-flag-percentage .percentage-label.disagreed+.d-icon {
-    background-color: var(--danger-medium);
-}
-.reviewable-item {
-    padding: 2em 1em;
-    border-top: 3px solid var(--tertiary-low-or-tertiary-high);
-    background-color: var(--primary);
-    padding-bottom: 1em;
-}
-.reviewable-item .reviewable-meta-data {
-    font-size: var(--font-0);
-    color: var(--secondary);
-}
-.reviewable-item .reviewable-meta-data .d-icon {
-    font-size: var(--font-up-1);
-}
 span.category-name {
     font-size: var(--font-up-1);
 }
@@ -987,6 +868,49 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
     color: var(--primary); 
 }
 
+/* Quotes */
+aside.quote .title {
+    border-left: 5px solid var(--tertiary-medium);
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    font-weight: bold;
+    padding: 12px 12px 6px 12px;
+}
+blockquote {
+    color: var(--secondary-very-high);
+    background-color: var(--primary-very-high);
+    border-left: 5px solid var(--tertiary-medium);
+}
+.quote-controls, .quote-controls .d-icon {
+    color: var(--primary);
+}
+.quote-controls a:focus {
+    background-color: var(--tertiary-low);
+}
+.quote aside .quote, 
+.quote aside .title, 
+.quote aside blockquote, 
+.quote aside .onebox, 
+.quote aside .onebox-result {
+    background: var(--primary);
+    border-left: 5px solid var(--tertiary-medium);
+    color: var(--tertiary-low);
+}
+.quote aside.quote .quote-controls .d-icon {
+    color: var(--tertiary-low);
+}
+span.highlighted {
+    color: var(--primary);
+    padding: 4px;
+}
+
+/* Summary */
+.summary:first-of-type {
+    font-weight: bold;
+    font-size: var(--font-up-1);
+    color: var(--tertiary-medium);
+    margin-bottom: 5px;
+}
 
 /* Profiles */
 .user-main .staff-counters>div span, 
@@ -1085,6 +1009,19 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
     left: auto;
     font-size: var(--font-down-1);
 }
+.topic-map .topic-links .badge-notification.clicks,
+.post-links-container .post-links .badge-notification.clicks {
+    top: 0;
+    right: 0;
+    position: relative;
+}
+.topic-link.track-link {
+    color: var(--tertiary-medium);
+}
+.topic-map span.domain {
+    font-size: var(--font-0);
+    color: var(--primary-med-or-secondary-med);
+}
 .links-section .domain {
     color: var(--primary-low-mid-or-secondary-high);
 }
@@ -1109,7 +1046,416 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
 
 }
 
+@-moz-document url-prefix("https://forums.halowaypoint.com/g/") {
+/* Groups */
+.user-content-wrapper {
+    grid-column-gap: 10px;
+}
+.user-secondary-navigation .nav-stacked li  {
+    margin-bottom: 5px;
+}
+.user-secondary-navigation .nav-stacked a {
+    color: var(--secondary-very-high);
+
+}
+.user-secondary-navigation .nav-stacked a:hover, 
+.user-secondary-navigation .nav-stacked a:active,
+.user-secondary-navigation .nav-stacked a:focus,
+.user-secondary-navigation .nav-stacked a.active {
+    background-color: rgba(0,0,0, 0.05);
+    color: var(--tertiary-medium);
+}
+
+/* Members */
+.group-details-container {
+    background: var(--primary);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.group-info .group-info-name {
+    color: var(--tertiary-very-low);
+}
+.group-info .group-info-full-name {
+    color: var(--tertiary-high);
+}
+table.group-members td {
+    color: var(--primary-low-mid);
+}
+
+/* Activity */
+.user-stream .item, .user-stream .user-stream-item {
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--tertiary-medium);
+    margin-bottom: 10px;
+    padding: 1em;
+}
+.user-stream .title  {
+    font-size: var(--font-up-1);
+}
+.user-stream .type, 
+.user-stream span.name {
+    color: var(--secondary);
+}
+.user-stream .name {
+    font-size: var(--font-up-1);
+    font-weight: bold;
+}
+.user-stream .time, 
+.user-stream .delete-info, 
+.user-stream .draft-type {
+    font-size: var(--font-0);
+}
+.group-member-info .user-title {
+    padding: 0 6px;
+    align-self: flex-start;
+    margin: 0;
+}
+.user-stream .excerpt {
+    color: var(--secondary);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
+/* Posts and topics */
+.select-kit .select-kit-header {
+    height: 100%;
+}
+.select-kit.multi-select {
+    background-color: transparent;
+}
+
+
+
+.topic-post {
+    background: var(--primary);
+    margin: 20px 0;
+    border-left: 0;
+    border-top: 3px solid var(--tertiary-medium);
+}
+.topic-post:first-of-type {
+    margin-top: 0;
+}
+
+/* Post notice */
+.post-notice {
+    max-width: 100%;
+    border-top: 0;
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+}
+.post-notice .d-icon {
+    color: var(--primary);
+}
+
+/* Hidden replies */
+.gap {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+.gap:hover,
+.gap:focus,
+.gap:active {
+    background-color: var(--tertiary-low);
+}
+
+/* Small actions */
+.small-action {
+    max-width: 100%;
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 0;
+    border-bottom: 1px solid var(--primary-high-or-secondary-low);
+    font-size: var(--font-down-1);
+}
+.small-action ~ .small-action {
+    border-bottom: 0;
+}
+.small-action.deleted {
+    margin-bottom: 1px;
+}
+.small-action .small-action-desc {
+    font-size: var(--font-0);
+    color: var(--tertiary-low);
+}
+.small-action .small-action-desc.timegap {
+    color: var(--secondary);
+}
+.small-action.topic-post-visited {
+    background-color: transparent;
+}
+.small-action.deleted .small-action-desc,
+.small-action.deleted .topic-avatar .d-icon {
+    color: var(--primary);
+}
+.small-action .topic-avatar .d-icon {
+    color: var(--tertiary-or-tertiary-low);
+}
+.small-action .btn,
+.small-action .btn .d-icon {
+    color: var(--secondary-high);
+}
+.small-action.deleted .d-icon,
+.small-action .btn:hover .d-icon,
+.small-action .btn:focus .d-icon,
+.small-action .btn:active .d-icon {
+    color: var(--primary);
+}
+
+.small-action.deleted .btn:hover,
+.small-action.deleted .btn:focus,
+.small-action.deleted .btn:active {
+    background-color: var(--danger-low);
+}
+
+.time-gap {
+    margin-bottom: 20px;
+}
+.small-action .small-action-desc.timegap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-up-1);
+    padding: 0.8em 0;
+}
+.time-gap .topic-avatar {
+    display: none;
+}
+
+.topic-status-info:empty, 
+.topic-timer-info:empty {
+    border: 0;
+}
+
+/* Post Author */
+.topic-post.topic-owner .topic-meta-data .names  {
+    position: relative;
+}
+.topic-post.topic-owner .topic-meta-data .names .first:after { /* After name */
+    content: 'OP';
+    margin: 0 0 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--primary);
+    background-color: var(--quaternary);
+    padding: 0;
+    border-radius: 0.25em;
+    font-weight: normal;
+    width: 2em;
+    height: 1.6em;
+    font-size: var(--font-down-3);
+    position: relative;
+    top: -1px;
+    line-height: 1.5;
+}
+/* .topic-post.topic-owner .topic-avatar:after {
+    content: 'OP';
+    position: absolute;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--primary);
+    background-color: var(--quaternary);
+    padding: 0;
+    border-radius: 0.25em;
+    font-weight: normal;
+    width: 2em;
+    height: 1.6em;
+    font-size: var(--font-down-1);
+    right: 8px;
+    bottom: -28px;
+} */
+
+.topic-avatar,
+.topic-body {
+    border-top: 0;
+}
+.topic-avatar {
+    margin-left: 15px;
+}
+
+/* PMs */
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked {
+    background: var(--tertiary-medium);
+    color: var(--primary);
+    font-size: var(--font-up-1);
+}
+.archetype-private_message .topic-body .cooked {
+    font-size: var(--font-up-1);
+    background-color: var(--primary-very-high);
+}
+.archetype-private_message .topic-map,
+.archetype-private_message .topic-body .cooked,
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked,
+.archetype-private_message .topic-map .participants .user,
+.archetype-private_message .map:first-of-type .buttons .btn {
+    border-radius: 0; 
+}
+.topic-map .participants .user .user-link, 
+.topic-map .participants .user .group-link {
+    color: var(--secondary);
+}
+.archetype-private_message .topic-map .participants .user {
+    background-color: var(--primary-very-high);
+}
+.topic-map .participants .user .user-link:hover, 
+.topic-map .participants .user .group-link:hover {
+    color: var(--primary-low-mid);
+}
+.archetype-private_message .topic-map .participants .user {
+    padding: 4px;
+}
+.topic-map .information {
+    color: var(--secondary);
+    border: 2px solid var(--tertiary-medium);
+    border-top: none;
+}
+
+
+/* Deleted post */
+.deleted .regular>.cooked {
+   color: var(--primary);
+}
+.deleted .topic-meta-data:not(.embedded-reply),
+.deleted nav.post-controls .d-icon,
+.deleted nav.post-controls .show-replies, 
+.deleted nav.post-controls button.reply.create,
+.deleted nav.post-controls .show-replies .d-icon, 
+.deleted nav.post-controls button.reply.create .d-icon,
+.deleted .post-action{
+    color: var(--danger-medium);
+}
+.deleted nav.post-controls .widget-button:hover,
+.deleted nav.post-controls button.reply.create:hover,
+.deleted nav.post-controls button.reply.create:hover .d-icon{
+    color: var(--primary);
+}
+
+/* Presence / replying */
+.presence-users {
+    background-color: var(--tertiary-hover);
+    color: var(--tertiary-very-low);
+    padding: 0.5em;
+    font-weight: bold;
+}
+.posts-filtered-notice {
+    max-width: 100%;
+    font-size: var(--font-up-1);
+}
+.filtered-jump-to-post {
+   color: var(--tertiary-hover);
+}
+
+/* Post pop-up menu */
+.popup-menu {
+    background-color: var(--primary);
+}
+.popup-menu .btn {
+    color: var(--secondary);
+}
+.popup-menu .btn .d-icon {
+    color: var(--tertiary-medium);
+}
+.popup-menu .btn:hover .d-icon,
+.popup-menu .btn:focus .d-icon,
+.popup-menu .btn:active .d-icon {
+    color: var(--primary);
+}
+
+}
+
+@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/badges") {
+/* Badges*/
+.badge-card {
+    background-color: var(--primary);
+    border: 3px solid var(--tertiary-medium);
+}
+.badge-card .badge-contents .badge-link, 
+.badge-card .badge-contents .badge-info {
+        color: var(--secondary);
+}
+.badge-card .grant-count {
+    color: var(--tertiary-low);
+}
+.badge-card .badge-contents .badge-icon.badge-type-bronze .fa {
+     color: var(--primary-high) !important;
+}
+.badge-card .badge-contents .badge-icon.badge-type-silver .fa {
+    color: var(--tertiary-medium) !important;
+}
+.badge-card .badge-contents .badge-icon.badge-type-gold .fa {
+    color: var(--quaternary)!important;
+}
+.badge-card .favorite-btn {
+    border-radius: 0;
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/review") {
+/* Review queues */
+
+tr.reviewable-score {
+    align-items: center;
+}
+.reviewable-scores {
+    color: var(--secondary);
+}
+
+.reviewable-item {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-top: 3px solid var(--tertiary-low-or-tertiary-high);
+    background-color: var(--primary);
+    padding-bottom: 1em;
+}
+.reviewable-item .reviewable-meta-data {
+    font-size: var(--font-0);
+    color: var(--secondary);
+}
+.reviewable-item .reviewable-meta-data .d-icon {
+    font-size: var(--font-up-1);
+}
+.reviewable-item .post-topic .title-text {
+    color: var(--secondary);
+}
+
+.reviewable-scores .user-flag-percentage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.user-flag-percentage .percentage-label { 
+    margin-right: 0;
+}
+.user-flag-percentage .percentage-label.agreed,
+.user-flag-percentage .percentage-label.disagreed {
+    color: var(--primary);
+    padding: 2px 4px 2px 6px;
+}
+.user-flag-percentage .percentage-label.agreed+.d-icon,
+.user-flag-percentage .percentage-label.disagreed+.d-icon {
+    color: var(--primary);
+    padding: 6px;
+    display: flex;
+}
+.user-flag-percentage .percentage-label.agreed,
+.user-flag-percentage .percentage-label.agreed+.d-icon {
+    background-color: var(--success-hover);
+}
+.user-flag-percentage .percentage-label.disagreed,
+.user-flag-percentage .percentage-label.disagreed+.d-icon {
+    background-color: var(--danger-medium);
+}
+
+}
+
 @-moz-document url-prefix("https://forums.halowaypoint.com") {
+/* General */
 .alert-emails-disabled { 
     display: none;
 }
@@ -1119,6 +1465,7 @@ div.menu-links-header .menu-links-row button.active:hover .fa {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/c/"), url-prefix("https://forums.halowaypoint.com/categories") {
+/* Categories */
 .badge-notification.new-topic::before {
     content: "New";
     background: var(--tertiary-high);
