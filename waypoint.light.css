@@ -1999,11 +1999,142 @@ th.category-link:before {
 }
 }
 
+@-moz-document url-prefix("https://forums.halowaypoint.com/g") {
+.groups-boxes .group-box {
+	background-color: var(--primary);
+	border: none;
+	border-bottom: 3px solid var(--tertiary-medium);
+}
+.groups-boxes .group-box .groups-info-name {
+	color: var(--tertiary-medium);
+}
+.groups-boxes .group-box .group-box-inner .group-description{
+	color: var(--tertiary-low);
+}
+.groups-boxes .group-box .group-membership .is-group-owner, 
+.groups-boxes .group-box .group-membership .is-group-member {
+	color: var(--tertiary-high);
+}
+.user-info .user-image {
+	margin-left: 10px;
+}
+/* table.group-members td:last-child {
+    display: none;
+} */
+.user-info .user-detail .title:not(:empty) {
+	color: var(--primary);
+    background-color: var(--quaternary);
+    width: max-content;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+}
+
 @-moz-document url-prefix("https://forums.halowaypoint.com/admin") {
 /* Admin */
 .admin-content.boxed.white {
     background-color: transparent;
 }
+
+.admin-controls,
+.admin-controls nav {
+	background-color: transparent;
+}
+.admin-controls nav:before,
+.admin-controls nav:after {
+	background: none;
+}
+.admin-controls .nav-pills {
+	padding: 0 0 10px 0;
+}
+
+.username .ember-view {
+    margin-left: 0px;
+}
+.users-list-container p {
+	background-color: var(--primary);
+	padding: 1em 0.75em;
+	font-weight: bold;
+	font-size: var(--font-up-1);
+	border-bottom: 3px solid var(--tertiary-medium);
+}
+
+.admin-contents table tr:hover {
+    background-color: rgba(0,0,0, 0.05);
+}
+.admin-contents table td, 
+.admin-contents table th {
+	padding: 1em;
+}
+tr.user.not-activated {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.user-status .d-icon {
+	color: var(--quaternary);
+}
+.user-status [title="Discourse Admin"] .d-icon {
+	color: var(--love);
+}
+
+.staff-actions .staff-user {
+	align-items: center;
+}
+.staff-actions .staff-user a:last-child {
+	margin-left: 10px;
+	font-size: var(--font-up-1);
+	color: var(--tertiary-medium);
+}
+.staff-user img.avatar,
+.username img.avatar {
+	width: 40px;
+	height: 40px;
+}
+.users-list-container .username .ember-view {
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: var(--font-up-1);
+}
+
+.col.action a {
+	color: var(--tertiary-low);
+	font-weight: bold;
+}
+.col.details a {
+	color: var(--tertiary-high);
+	font-weight: bold;
+}
+.col.term a {
+	color: var(--tertiary-medium);
+	font-weight: bold;
+}
+
+.screened-urls .loading-container,
+.screened-emails .loading-container {
+	margin-top: 20px;
+	padding: 1em;
+	font-weight: bold;
+	font-size: var(--font-up-1);
+	background-color: var(--primary);
+	border-bottom: 3px solid var(--tertiary-medium);
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .date-section {
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row .date-section {
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .date-section {
+	color: var(--tertiary-low);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .date-section,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .top-date-string,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .top-date-string {
+	color: var(--primary);
+}
+
 .display-row {
     border-color: var(--primary-high);
 }
@@ -2036,4 +2167,126 @@ section.details h1 {
     font-size: var(--font-up-1);
     font-weight: bold;
 }
+
+/* Customize */
+.admin-customize .admin-container {
+	padding: 0;
+}
+.admin-controls .controls {
+	padding: 0;
+	margin-bottom: 20px;
+	background-color: transparent;
+}
+.nav-stacked {
+	margin: 0;
+	background-color: var(--primary);
+}
+.nav-stacked li {
+	border-color: var(--primary-high);
+}
+.nav-stacked a {
+	color: var(--tertiary-low);
+}
+.nav-stacked a.active {
+	color: var(--primary);
+}
+.nav-stacked a.active::after {
+	border-left-color: var(--primary);
+}
+.admin-detail {
+	background-color: var(--primary);
+	border-color: var(--primary-high);
+}
+
+.watched-words-list .watched-word-box {
+	background-color: rgba(0,0,0,0.05);
+	padding: 0.75em 0.25em;
+	min-width: calc(50% - 25px);
+	border-bottom: 3px solid var(--tertiary-medium);
+}
+.watched-word {
+	margin-left: 10px;
+}
+.watched-word-box .replacement, 
+.watched-words-test-modal .replacement {
+	color: var(--primary);
+	padding: 4px 8px;
+	border-radius: 3px;
+	background-color: var(--tertiary-medium);
+}
+.watched-word-box .replacement  {
+    position: relative;
+    top: -2px;
+}
+.delete-word-record {
+	background-color: var(--danger-hover);
+	border-radius: 3px;
+	height: 1em;
+	width: 1em;
+	padding: 0.25em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	transition: background-color ease 0.3s;
+}
+.delete-word-record:hover {
+	background-color: var(--danger-medium);
+}
+
+.watched-word .d-icon {
+	color: var(--primary);
+	margin: 0;
+}
+.watched-word .d-icon:hover {
+	color: var(--primary);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/top") {
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .date-section,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon{
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .date-section {
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row .date-section {
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .date-section {
+	color: var(--tertiary-low);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .date-section,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .top-date-string,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .top-date-string {
+	color: var(--primary);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/") {
+.page-not-found-topics .popular-topics,
+.page-not-found-topics .recent-topics,
+.not-found-container .popular-topics, 
+.not-found-container .recent-topics {
+	width: 1000%;
+    max-width: 100%;
+}
+.page-not-found-topics .not-found-topic,
+.not-found-container .not-found-topic {
+    background-color: var(--primary);
+    padding: 1em;
+	border-left: 3px solid var(--tertiary-medium);
+}
+.page-not-found-topics .not-found-topic a:not(.badge-wrapper),
+.not-found-container .not-found-topic a:not(.badge-wrapper) {
+	font-size: var(--font-up-1);
+	font-weight: bold;
+}
+.page-not-found-topics .badge-wrapper .badge-category,
+.not-found-container .badge-wrapper .badge-category {
+	font-size: var(--font-up-1);
+}
+
 }
