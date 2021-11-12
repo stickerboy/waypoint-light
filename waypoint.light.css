@@ -43,6 +43,12 @@ textarea {
 .empty-state {
     color: var(--secondary);
 }
+.empty-state .empty-state-body {
+    background-color: var(--primary);
+    padding: 0.25em 1em;
+    margin-top: 10px;
+    border-bottom: 3px solid var(--tertiary-medium);
+}
 
 /* Navigation */
 .halo-custom-navigation-links-item a {
@@ -75,6 +81,17 @@ textarea {
 .halo-custom-navigation-links-item a {
     color: var(--secondary);
 }
+.halo-custom-navigation-search .search-menu .results {
+    background-color: var(--primary)
+}
+.search-menu .results .label-suffix {
+    color: var(--primary-low-mid-or-secondary-high);
+}
+.search-menu .search-link:focus, 
+.search-menu .search-link:hover {
+    background-color: var(--primary);
+    color: var(--tertiary-medium);
+}
 
 .alert.alert-info {
     background-color: var(--tertiary-medium);
@@ -85,6 +102,12 @@ textarea {
 
 
 /* Topics */
+#list-area {
+    margin-bottom: 0;
+}
+[data-category-id="31"] {
+    order: 1;
+}
 .category-boxes h3,
 [class*='category-'] .topic-list .halo-category-sidebar-list-link-item-header {
     color: var(--secondary);
@@ -136,16 +159,17 @@ tbody {
 .category-topic-link.visited span.badge-category {
     color: var(--tertiary-medium);
 }
+.topic-statuses .topic-status {
+    margin-top: 0.3em;
+}
+.topic-list-item.closed {
+    background-color: var(--primary-very-high);
+}
+.topic-list-item.closed .topic-status {
+    color: var(--danger-medium);
+}
 
-.halo-topic-map {
-    background-color: rgba(0,0,0, 0.05);
-}
-.halo-topic-map-list-item-count {
-    color: var(--primary-low);
-}
-.halo-topic-map-list-item-description {
-    color: var(--secondary-low-mid);
-}
+
 .discourse-tag {
     color: var(--tertiary-low);
 }
@@ -270,6 +294,9 @@ nav.post-controls .actions button:active .d-icon {
     line-height: 1.5;
     font-size: var(--font-0);
 }
+.names .fa {
+    color: var(--primary);
+}
 
 .moderator .regular>.cooked::before {
     content: "Highlighted";
@@ -328,8 +355,6 @@ nav.post-controls .actions button:active .d-icon {
 }
 
 
-
-
 p > code,
 li > code,
 pre > code {
@@ -377,7 +402,13 @@ pre > code {
     color: var(--primary);
 }
 .select-kit .select-kit-row.is-selected {
-    background-color: var(--tertiary-med-or-tertiary);
+    background-color: var(--tertiary-high);
+}
+.d-icon.d-icon-d-watching {
+    color: var(--primary);
+}
+.d-icon.d-icon-d-tracking {
+    color: var(--tertiary-medium);
 }
 .d-editor-button-bar .btn {
     border-radius: 0;
@@ -426,7 +457,7 @@ pre > code {
     color: var(--primary);
     background-color: var(--tertiary-high);
     font-weight: bold;
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 
@@ -609,7 +640,8 @@ color: var(--primary);
     background: var(--tertiary-medium);
 }
 .btn:focus .d-icon,
-.btn .d-icon {
+.btn .d-icon,
+.btn.cancel .d-icon {
     color: var(--primary);
 }
 .btn:active, 
@@ -620,12 +652,18 @@ color: var(--primary);
     background: unset;
     background-color: var(--tertiary-low);
 }
+.btn.cancel:hover,
+.btn.cancel:focus,
+.btn.cancel:hover {
+    background: var(--danger-medium);
+}
 .discourse-local-dates-create-modal-footer .cancel-action {
     color: var(--tertiary-low);
 }
 
 .boxed.white {
-    background-color: rgba(0,0,0, 0.05);
+/*     background-color: rgba(0,0,0, 0.05); */
+    background-color: var(--primary);
 }
 
 
@@ -904,99 +942,7 @@ span.highlighted {
     padding: 4px;
 }
 
-/* Summary */
-.summary:first-of-type {
-    font-weight: bold;
-    font-size: var(--font-up-1);
-    color: var(--tertiary-medium);
-    margin-bottom: 5px;
-}
 
-/* Profiles */
-.user-main .staff-counters>div span, 
-.user-main .staff-counters>div a span {
-    padding: 4px 10px 2px;
-    border-radius: 0;
-    color: var(--primary);
-    font-weight: bold;
-}
-.user-main .helpful-flags {
-    background-color: var(--tertiary-high);
-}
-
-.user-main .about .details {
-    background: rgba(var(--primary-rgb), 0.8);
-    border-bottom: 3px solid var(--tertiary-medium);
-    padding: 10px;
-}
-
-.user-main .about .details h1 .d-icon {
-    color: var(--quaternary);
-}
-.user-main .about .details .user-profile-names h3 {
-    font-weight: bold;
-    color: var(--quaternary);
-}
-.user-main .about .secondary {
-    border-top: 2px solid var(--tertiary-medium);
-}
-.user-main .about .secondary dd {
-    color: var(--tertiary-or-tertiary-low);
-}
-.user-main .about .secondary dl {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(140px, 1fr) );
-    grid-gap: 0.5em;
-}
-.user-main .about .secondary dt {
-    margin-left: 0 !important;
-    margin-right: 1em;
-}
-.user-main .about .secondary dd {
-    margin: 0;
-}
-.user-main .about .secondary dl div {
-    padding: 0.75em;
-}
-.user-main .about .secondary dl div:nth-of-type(6) {
-    order: 1;
-}
-
-.user-primary-navigation .nav-pills > li {
-    margin-right: 5px;
-}
-.user-primary-navigation .nav-pills > li a .d-icon {
-    margin-right: 5px;
-}
-.stats-section ul {
-    margin: 10px 0;
-    padding: 5px 15px;
-    background-color: var(--primary);
-    border-bottom: 3px solid var(--tertiary-medium);
-}
-.stats-section .label {
-    color: var(--primary-low-mid-or-secondary-high);
-}
-.stats-section li.linked-stat a {
-    color: var(--tertiary-medium);
-}
-
-.top-sub-section li {
-    position: relative;
-    border-left: 3px solid var(--tertiary-medium);
-    background-color: var(--primary);
-    padding: 8px 10px;
-}
-.top-sub-section .topic-info {
-    color: var(--primary-low-mid-or-secondary-high);
-    font-weight: bold;
-}
-.top-sub-section li a {
-    color: var(--tertiary-medium);
-    font-weight: bold;
-}
 .badge-notification.clicks {
     font-weight: normal;
     background-color: var(--tertiary-medium);
@@ -1044,10 +990,15 @@ span.highlighted {
     padding: 0.75em 1em;
 }
 
+.footer-message {
+    background-color: var(--primary);
+    padding: 1em;
+    border-bottom: 3px solid var(--tertiary-medium);
+}
 }
 
-@-moz-document url-prefix("https://forums.halowaypoint.com/g/") {
-/* Groups */
+@-moz-document url-prefix("https://forums.halowaypoint.com/g/"), url-prefix("https://forums.halowaypoint.com/u/") {
+/* User and Groups */
 .user-content-wrapper {
     grid-column-gap: 10px;
 }
@@ -1112,6 +1063,9 @@ table.group-members td {
 .user-stream .excerpt {
     color: var(--secondary);
 }
+.user-stream-item-draft-actions .fa.d-icon-far-trash-alt {
+    color: var(--primary);
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/") {
@@ -1123,7 +1077,18 @@ table.group-members td {
     background-color: transparent;
 }
 
-
+.halo-topic-map {
+    background-color: var(--primary);
+}
+.halo-topic-map-list {
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.halo-topic-map-list-item-count {
+    color: var(--primary-low);
+}
+.halo-topic-map-list-item-description {
+    color: var(--secondary-low-mid);
+}
 
 .topic-post {
     background: var(--primary);
@@ -1185,6 +1150,7 @@ table.group-members td {
 }
 .small-action.topic-post-visited {
     background-color: transparent;
+    border: none;
 }
 .small-action.deleted .small-action-desc,
 .small-action.deleted .topic-avatar .d-icon {
@@ -1287,6 +1253,7 @@ table.group-members td {
 .archetype-private_message .topic-body .cooked {
     font-size: var(--font-up-1);
     background-color: var(--primary-very-high);
+    border-color: var(--tertiary-medium);
 }
 .archetype-private_message .topic-map,
 .archetype-private_message .topic-body .cooked,
@@ -1304,7 +1271,7 @@ table.group-members td {
 }
 .topic-map .participants .user .user-link:hover, 
 .topic-map .participants .user .group-link:hover {
-    color: var(--primary-low-mid);
+    color: var(--tertiary-medium);
 }
 .archetype-private_message .topic-map .participants .user {
     padding: 4px;
@@ -1313,6 +1280,9 @@ table.group-members td {
     color: var(--secondary);
     border: 2px solid var(--tertiary-medium);
     border-top: none;
+}
+.topic-map-post.last-reply span.relative-date {
+    color: var(--tertiary-medium);
 }
 
 
@@ -1365,7 +1335,15 @@ table.group-members td {
 .popup-menu .btn:active .d-icon {
     color: var(--primary);
 }
-
+.popup-menu .btn.popup-menu-btn-danger .d-button-label {
+    color: var(--danger-medium);
+}
+.popup-menu .btn.popup-menu-btn-danger:focus .d-icon, 
+.popup-menu .btn.popup-menu-btn-danger:focus .d-button-label, 
+.popup-menu .btn.popup-menu-btn-danger:hover .d-icon, 
+.popup-menu .btn.popup-menu-btn-danger:hover .d-button-label {
+    color: var(--primary);
+}
 }
 
 @-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/badges") {
@@ -1388,7 +1366,7 @@ table.group-members td {
     color: var(--tertiary-medium) !important;
 }
 .badge-card .badge-contents .badge-icon.badge-type-gold .fa {
-    color: var(--quaternary)!important;
+    color: var(--quaternary) !important;
 }
 .badge-card .favorite-btn {
     border-radius: 0;
@@ -1476,5 +1454,481 @@ tr.reviewable-score {
     width: 2.4rem;
     height: 1.3rem;
     color: var(--primary);
+}
+
+.topic-list .main-link,
+.topic-list .topic-excerpt {
+    font-size: var(--font-0);
+}
+
+.nav-pills > li > a:hover {
+    background-color: inherit;
+    color: inherit;
+}
+.topic-list-item.closed {
+    background-color: var(--primary-very-high);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/search") {
+/* Search */
+.search-container .search-header,
+.search-container .search-bar,
+.search-container .search-filters,
+.search-container .search-filters .search-advanced-filters,
+.search-container .search-advanced .search-info.bulk-select-visible,
+.search-container .search-advanced .search-info {
+    background-color: var(--primary);
+}
+.search-container .search-advanced .search-info.bulk-select-visible,
+.search-container .search-advanced .search-info {
+    border-bottom: 2px solid var(--tertiary-medium);
+}
+.search-container .search-filters details.search-advanced-additional-options > summary,
+.search-container .search-filters details.advanced-filters > summary, 
+.search-container .search-filters details.search-advanced-additional-options > summary {
+    font-size: var(--font-0);
+    color: var(--tertiary-medium);
+    font-weight: bold;
+}
+.search-container .search-page-heading span.term {
+    color: var(--primary);
+    padding: 2px 8px 5px;
+    border-radius: 3px;
+}
+
+.search-container .search-notice .fps-invalid {
+    border: 1px solid var(--danger-low);
+    background-color: var(--danger-medium);
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.search-header{
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.search-container .search-advanced .search-info {
+    padding: 2em 10%;
+}
+
+/* Results */
+.search-container .search-advanced .search-results {
+    padding: 0;
+}
+.fps-result {
+    background-color: var(--primary);
+    margin-bottom: 20px;
+    padding: 1em;
+    border-top: 3px solid var(--tertiary-medium);
+}
+.fps-result .topic .bulk-select {
+    background-color: var(--tertiary-medium);
+    padding: 0.45em 0.5em;
+}
+.fps-result .topic .bulk-select input[type="checkbox"] {
+    margin: 0;
+    width: 18px;    
+    height: 15px;
+    transform: scale3d(1.5, 1.5, 1.5);
+}
+.fps-result .search-link .topic-title {
+    color: var(--tertiary-medium);
+}
+.discourse-tag.bullet {
+    font-size: var(--font-down-1);
+}
+.fps-result .blurb {
+    margin-top: 1em;
+    font-size: var(--font-0);
+    color: var(--primary-low);
+}
+.fps-result .blurb .date {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+}
+.badge-category.restricted .d-icon,
+.topic-statuses .topic-status .d-icon.locked {
+    color: var(--danger-medium);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/u") {
+/* User Profiles */
+.user-main .staff-counters>div span, 
+.user-main .staff-counters>div a span {
+    padding: 4px 10px 2px;
+    border-radius: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+.user-main .helpful-flags {
+    background-color: var(--tertiary-high);
+}
+.user-main .about .details {
+    background: rgba(var(--primary-rgb), 0.8);
+    border-bottom: 3px solid var(--tertiary-medium);
+    padding: 1em;
+}
+.user-main .about .details h1 .d-icon {
+    color: var(--quaternary);
+}
+.user-main .about .details .user-profile-names h3 {
+    font-weight: bold;
+    color: var(--quaternary);
+}
+.user-main .about .secondary {
+    border-top: 2px solid var(--tertiary-medium);
+}
+.user-main .about .secondary dd {
+    color: var(--tertiary-or-tertiary-low);
+}
+.user-main .about .secondary dl {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(140px, 1fr) );
+    grid-gap: 0.5em;
+}
+.user-main .about .secondary dt {
+    margin-left: 0 !important;
+    margin-right: 1em;
+    font-weight: bold;
+    color: var(--tertiary-or-tertiary-low);
+}
+.user-main .about .secondary dd {
+    margin: 0;
+}
+.user-main .about .secondary dl div {
+    padding: 0.75em;
+}
+.user-main .about .secondary dl div:nth-of-type(6) {
+    order: 1;
+}
+.user-primary-navigation .nav-pills > li {
+    margin-right: 5px;
+}
+.user-primary-navigation .nav-pills > li a .d-icon {
+    margin-right: 5px;
+}
+.stats-section ul {
+    margin: 10px 0;
+    padding: 5px 15px;
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.stats-section .label {
+    color: var(--primary-low-mid-or-secondary-high);
+}
+.stats-section li.linked-stat a {
+    color: var(--tertiary-medium);
+}
+
+/* Summary */
+.user-primary-navigation .summary:first-of-type {
+    font-weight: bold;
+    font-size: var(--font-up-1);
+    color: var(--tertiary-medium);
+    margin-bottom: 5px;
+}
+.top-sub-section ul {
+    max-width: 100%;
+}
+.top-sub-section li,
+.top-sub-section p {
+    position: relative;
+    border-left: 3px solid var(--tertiary-medium);
+    background-color: var(--primary);
+    padding: 8px 10px;
+}
+.top-sub-section .topic-info {
+    color: var(--primary-low-mid-or-secondary-high);
+    font-weight: bold;
+}
+.top-sub-section li a {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+}
+.user-content .top-section:not(.stats-section):not(.badges-section) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.top-section:before, 
+.top-section:after {
+    content: none;
+}
+.top-sub-section {
+    width: 100%;
+    margin-bottom: 0;
+}
+.top-sub-section p { 
+    padding: 0.75em 1em;
+    margin: 0;
+}
+th.category-link:before {
+    content: "Category";
+}
+.badges-section .more {
+    padding: 0.5em 1em;
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    transition: 0.3s background-color ease;
+}
+.badges-section .more:hover,
+.badges-section .more:active,
+.badges-section .more:focus {
+    background-color: var(--tertiary-low);
+}
+
+/* Nofitications */
+.select-kit.dropdown-select-box.notifications-filter .notifications-filter-header .filter-text,
+.select-kit.dropdown-select-box.notifications-filter .notifications-filter-header .header-text {
+    font-weight: bold;
+}
+.select-kit.dropdown-select-box.notifications-filter .notifications-filter-header .filter-text {
+    color: var(--tertiary-low);
+}
+.select-kit.dropdown-select-box.notifications-filter .notifications-filter-header .header-text {
+    color: var(--tertiary-medium);
+}
+.user-stream .notification.unread .fa, 
+.user-stream .notification .icon {
+    color: var(--primary);
+}
+.user-stream .notification .fa, 
+.user-stream .notification .icon {
+    color: var(--tertiary-medium);
+}
+.user-stream .item.notification {
+    padding: 0;
+}
+.user-stream .item.notification > div {
+    width: 100%;
+}
+.large-notification {
+    font-size: var(--font-up-1);
+}
+.large-notification a {
+    width: calc(100% - 8px);
+}
+.large-notification .private-message:not(.read) a {
+    width: calc(100% + 8px);
+}
+.large-notification .group-message-summary {
+    width: 100%;
+}
+.large-notification .read a span:first-child {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+    margin-right: 5px;
+}
+.large-notification .read a div:last-child {
+    color: var(--primary-low);
+}
+.large-notification.unread a span:first-child {
+    color: var(--tertiary);
+}
+.large-notification.unread a {
+    color: var(--primary);
+}
+.large-notification .read a:hover,
+.large-notification .read a:active,
+.large-notification .read a:focus {
+    background-color: var(--primary-very-high);
+}
+.large-notification.unread a:hover,
+.large-notification.unread a:active,
+.large-notification.unread a:focus {
+    background-color: var(--tertiary-medium);
+}
+.user-stream .large-notification.unread .time {
+    color: var(--primary);
+}
+.user-stream .large-notification .time {
+    color: var(--tertiary-low);
+}
+
+/* Invites */
+.user-invite-none {
+    background-color: var(--primary);
+    margin-bottom: 20px;
+    padding: 1em;
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+
+/* Prefernces */
+.user-preferences {
+    padding: 2em;
+}
+.user-preferences .form-vertical {
+    width: 100%;
+}
+.user-content.user-preferences {
+    background-color: var(--primary);
+    margin-bottom: 20px;
+    border-top: 2px solid var(--tertiary-medium);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+.user-preferences .static {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+    font-size: var(--font-up-2);
+}
+.user-preferences .instructions {
+    color: var(--primary-low);
+    font-size: var(--font-0);
+}
+.pref-email .email-second .primary {
+    background-color: var(--tertiary-medium);
+    color: var(--primary);
+    padding: 4px 8px;
+    font-size: var(--font-up-1);
+}
+.pref-email .email-second {
+    color: var(--primary-low);
+    font-weight: bold;
+}
+
+/* Security */
+.pref-auth-tokens .row {
+    border-bottom: 1px solid var(--tertiary-medium);
+    margin-bottom: 10px;
+    padding: 1em;
+}
+.pref-auth-tokens .auth-token-icon {
+    color: var(--tertiary-medium);
+}
+.pref-auth-tokens .auth-token-second {
+    color: var(--primary-low);
+    font-weight: bold;
+}
+.pref-auth-tokens .auth-token-second .active {
+    color: var(--tertiary-high);
+}
+.pref-auth-tokens .auth-token-dropdown .btn {
+    background-color: var(--tertiary-medium);
+}
+.pref-auth-tokens .auth-token-dropdown .btn .d-icon,
+.pref-auth-tokens .auth-token-dropdown .btn:hover .d-icon,
+.pref-auth-tokens .auth-token-dropdown .btn:active .d-icon,
+.pref-auth-tokens .auth-token-dropdown .btn:focus .d-icon {
+    color: var(--primary);
+}
+.pref-auth-tokens .auth-token-dropdown .btn:hover,
+.pref-auth-tokens .auth-token-dropdown .btn:active,
+.pref-auth-tokens .auth-token-dropdown .btn:focus {
+    background-color: var(--tertiary-low);
+}
+.pref-auth-tokens [data-ember-action] {
+    font-size: var(--font-up-1);
+}
+.auth-token .select-kit .d-icon {
+    color: var(--tertiary-low);
+}
+
+/* Profile */
+.input-xxlarge, 
+.input-xxlarge+.control-instructions {
+    width: 100%;
+}
+
+.user-preferences .bio-composer, 
+.group-form-bio {
+    padding: 0;
+    border: 0;
+}
+.user-preferences .bio-composer .d-editor-preview, 
+.group-form-bio .d-editor-preview, 
+.edit-category-tab-topic-template .d-editor-preview {
+    background-color: var(--primary-very-high);
+    border-bottom: 3px solid var(--tertiary-medium);
+}
+
+/* Notifications */
+.notification-schedule-table {
+    width: 100%;
+}
+.user-preferences .d-icon.d-icon-d-watching {
+    color: var(--primary-high);
+}
+
+/* Ignore list*/
+.ignored-list {
+    background-color: var(--primary-very-high);
+    border-left: 3px solid var(--tertiary-medium);
+    padding: 0.5em 1em;
+}
+.user-chooser .select-kit-row.user-row .username {
+    color: var(--tertiary-low);
+}
+.user-chooser .select-kit-row.user-row.is-highlighted .username {
+    color: var(--primary);
+}
+
+/* Apps */
+.apps .controls {
+    margin-top: 20px;
+}
+.apps .controls > div {
+    position: relative;
+    background-color: var(--primary-very-high);
+    border-bottom: 3px solid var(--tertiary-medium);
+    padding: 0.5em 1em;
+}
+.apps .controls > div > span {
+    font-weight: bold;
+    font-size: var(--font-up-2);
+    color: var(--tertiary-medium);
+}
+.apps .controls > div > button {
+    position: absolute;
+    right: 10px;
+}
+.apps .controls > div > p {
+    border-left: 3px solid var(--tertiary-medium);
+    background-color: var(--primary);
+    padding: 0.5em;
+}
+.apps .controls .relative-date {
+    font-weight: bold;
+    color: var(--tertiary-medium);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/admin") {
+.admin-content.boxed.white {
+    background-color: transparent;
+}
+.display-row {
+    border-color: var(--primary-high);
+}
+a.inline-editable-field {
+    color: var(--tertiary-medium);
+    font-weight: bold;
+}
+section.details {
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--tertiary-medium);
+    border-top: 2px solid var(--tertiary-medium);
+    margin-bottom: 20px;
+    padding: 1em;
+}
+section.details h1 {
+    color: var(--tertiary-low);
+    border-bottom-color: var(--tertiary-high);
+}
+
+.admin-contents hr {
+    border: 0;
+    margin: 0;
+}
+.admin-contents section section:last-of-type div:last-of-type {
+    background-color: var(--primary);
+    padding: 0.5em 1em;
+    float: none;
+    text-align: right;
+    border-bottom: 3px solid var(--danger);
+    font-size: var(--font-up-1);
+    font-weight: bold;
 }
 }
