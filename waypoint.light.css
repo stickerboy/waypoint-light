@@ -964,6 +964,10 @@ table.group-members td {
     border: 0;
 }
 
+#topic-title .edit-topic-title .mini-tag-chooser {
+	margin-left: 0;
+}
+
 /* Post */
 .topic-post {
     background: var(--primary);
@@ -1108,6 +1112,15 @@ li > code,
 pre > code {
     background: var(--tertiary-low);
     padding: 0 4px;
+}
+
+.onebox.category-onebox {
+	margin-right: 24px;
+	background-color: var(--primary-very-high);
+	border-color: var(--primary-high);
+}
+aside.onebox .onebox-body a[href] {
+	color: var(--quaternary);
 }
 
 
@@ -1421,7 +1434,14 @@ tr.reviewable-score {
 .user-flag-percentage .percentage-label.disagreed+.d-icon {
     background-color: var(--danger-medium);
 }
-
+.names span a {
+    color: var(--tertiary-medium);
+}
+.reviewable-item .reviewable-post-header,
+.reviewable-item .post-body {
+	max-width: 100%;
+	width: 100%;
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com") {
@@ -1535,6 +1555,15 @@ table th,
 .topic-list .main-link,
 .topic-list .topic-excerpt {
     font-size: var(--font-0);
+}
+
+.topic-list .topic-list-item-separator td span {
+    background-color: var(--danger-low-mid);
+    color: var(--primary);
+	font-size: var(--font-0);
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 3px;
 }
 
 .navigation-container .nav-pills > li > a:hover {
@@ -2095,6 +2124,13 @@ tr.user.not-activated {
 	font-weight: bold;
 	font-size: var(--font-up-1);
 }
+.ip-lookup .location-box {
+	background-color: var(--primary);
+	border: 3px solid var(--tertiary-medium);
+}
+.close:hover {
+    color: var(--tertiary-medium);
+}
 
 .col.action a {
 	color: var(--tertiary-low);
@@ -2339,6 +2375,15 @@ section.details h1 {
 .select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .top-date-string,
 .select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .top-date-string {
 	color: var(--primary);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/unread") {
+div.education {
+    color: var(--secondary);
+	margin-bottom: 1em;
+    border-top: 2px solid var(--tertiary-medium);
+    border-bottom: 3px solid var(--tertiary-medium);
 }
 }
 
