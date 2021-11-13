@@ -2241,6 +2241,83 @@ section.details h1 {
 .watched-word .d-icon:hover {
 	color: var(--primary);
 }
+
+/* Account managaement */
+.dashboard .section .section-title h2 a, 
+.dashboard-next .section .section-title h2 a,
+.dashboard .navigation .navigation-link, .dashboard-next .navigation .navigation-link{
+	color: var(--tertiary-medium);
+}
+.dashboard .navigation .navigation-item:hover, 
+.dashboard-next .navigation .navigation-item:hover {
+	background-color: var(--tertiary-medium);
+}
+.dashboard .navigation .navigation-item:hover a, 
+.dashboard-next .navigation .navigation-item:hover a {
+	color: var(--primary);
+}
+.dashboard.dashboard-security .navigation-item.security .navigation-link, 
+.dashboard-next.dashboard-security .navigation-item.security .navigation-link {
+    border-bottom: 0.4em solid var(--tertiary-low);
+}
+.admin-report .header .breadcrumb .report .report-url {
+	color: var(--tertiary-medium);
+}
+.admin-report .main .report-alert.no-data, .admin-report .main .report-alert.rate-limited {
+    background: var(--primary);
+	border-color: transparent;
+    border-bottom-color: var(--tertiary-medium);
+	border-bottom-width: 3px;
+    color: var(--primary-low-mid);
+}
+.admin-report .main .report-alert a {
+	color: var(--tertiary-low);
+}
+.admin-report .main .report-alert.no-data, 
+.admin-report .main .report-alert.rate-limited {
+	color: var(--tertiary-medium);
+}
+#d-popover {
+	background-color: var(--primary);
+	border-color: var(--tertiary-medium);
+	font-size: var(--font-up-1);
+}
+.dashboard-reports .report {
+	background-color: var(--primary);
+	border: none;
+	border-bottom: 3px solid var(--tertiary-medium);
+} 
+.dashboard-reports .report a .report-description {
+	color: var(--tertiary-low);
+}
+
+.admin-report-table .table {
+	border: none;
+}
+.staff-user img.avatar, 
+.username img.avatar {
+	margin-right: 10px;
+}
+.admin-report-table .total-row {
+	background-color: rgba(0,0,0,0.03);
+}
+.admin-report-table .btn.no-text .d-icon, 
+.admin-report-table .json-schema-editor-modal ,
+.admin-report-table .btn.json-editor-btn-delete .d-icon, 
+.admin-report-table .btn.cancel .d-icon {
+    color: var(--tertiary-low);
+}
+.conditional-loading-section.is-loading {
+	background-color: var(--primary);
+	border: none;
+	border-bottom: 3px solid var(--tertiary-medium);
+}
+.admin-report-chart {
+    background-color: var(--primary);
+}
+.admin-contents table .client_ip {
+    word-break: break-all;
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/top") {
@@ -2287,6 +2364,13 @@ section.details h1 {
 .page-not-found-topics .badge-wrapper .badge-category,
 .not-found-container .badge-wrapper .badge-category {
 	font-size: var(--font-up-1);
+}
+
+}
+
+@-moz-document url("https://forums.halowaypoint.com/admin") {
+.boxed.white {
+    background-color: var(--primary) !important;
 }
 
 }
