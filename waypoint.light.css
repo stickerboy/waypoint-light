@@ -1329,6 +1329,12 @@ a.mention:focus,
 a.mention:active {
 	background-color: var(--tertiary-medium);
 }
+.cooked ins, .d-editor-preview ins {
+	color: var(--primary);
+	padding: 2px 6px 1px;
+	background: var(--tertiary-low);
+	border-radius: 3px;
+}
 }
 
 @-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/badges") {
@@ -1360,10 +1366,6 @@ a.mention:active {
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/review") {
 /* Review queues */
-.nav-pills {
-	display: flex;
-	/* Fix odd positioning of the queue */
-}
 tr.reviewable-score {
 	align-items: center;
 }
@@ -1447,6 +1449,54 @@ tr.reviewable-score {
 .reviewable-item .reviewable-post-header,
 .reviewable-item .post-body {
 	max-width: 100%;
+	width: 100%;
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/review"), url-prefix("https://forums.halowaypoint.com/about"), url-prefix("https://forums.halowaypoint.com/faq"), url-prefix("https://forums.halowaypoint.com/tos"), url-prefix("https://forums.halowaypoint.com/privacy") {
+/* Fix nav breaking layouts */
+.nav-pills {
+	display: flex;
+}
+.body-page {
+    width: 100%;
+    max-width: 100%;
+}
+[itemprop="mainContentOfPage"] {
+	padding: 1em;
+	border-top: 2px solid var(--tertiary-low-or-tertiary-high);
+	border-bottom: 3px solid var(--tertiary-low-or-tertiary-high);
+	background-color: var(--primary);
+}
+}
+
+@-moz-document url-prefix("https://forums.halowaypoint.com/about") {
+.about.admins .ember-view,
+.users .ember-view {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 5px 15px;
+}
+section.about h3 {
+	color: var(--tertiary-low);
+}
+.user-info .user-detail {
+	width: 100%;
+	float: none;
+}
+.user-info.small {
+	padding: 1em;
+	border-left: 3px solid var(--tertiary-low-or-tertiary-high);
+	background-color: var(--primary);
+}
+.username a {
+	font-size: var(--font-up-1);
+	font-weight: bold;
+}
+.about-page .body-page section:not(.admins):not(.moderators):not(.category-moderators) {
+	max-width: 100%;
+}
+section.about table {
 	width: 100%;
 }
 }
