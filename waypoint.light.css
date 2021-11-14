@@ -480,6 +480,9 @@ textarea {
 }
 
 /* Tile grid - where is this? */
+.tap-tile-grid .tap-tile .tap-tile-title {
+	color: var(--secondary);
+}
 .tap-tile-grid .tap-tile.active {
 	background-color: var(--tertiary-low-or-tertiary-high);
 	color: var(--primary);
@@ -489,12 +492,16 @@ textarea {
 	color: var(--secondary);
 	border-color: var(--primary-high);
 }
+
 .tap-tile-grid .tap-tile.active:hover,
 .tap-tile-grid .tap-tile.active:active,
 .tap-tile-grid .tap-tile.active:focus,
 .tap-tile-grid .tap-tile:hover,
 .tap-tile-grid .tap-tile:active,
-.tap-tile-grid .tap-tile:focus {
+.tap-tile-grid .tap-tile:focus,
+.tap-tile-grid .tap-tile:hover .tap-tile-title,
+.tap-tile-grid .tap-tile:active .tap-tile-title,
+.tap-tile-grid .tap-tile:focus .tap-tile-title {
 	color: var(--primary);
 	background-color: var(--tertiary-low);
 }
@@ -1337,7 +1344,7 @@ a.mention:active {
 }
 }
 
-@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9]+\\/badges") {
+@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/badges") {
 /* Badges*/
 .badge-card {
 	background-color: var(--primary);
