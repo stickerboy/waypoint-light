@@ -1325,6 +1325,7 @@ nav.post-controls .actions button.delete:focus .d-icon {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/notifications/[A-Za-z0-9_ ]+") {
+/* Mentions & Inserts */
 a.mention {
 	color: var(--primary);
 	padding: 2px 6px 0px;
@@ -1461,7 +1462,7 @@ tr.reviewable-score {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/review"), url-prefix("https://forums.halowaypoint.com/about"), url-prefix("https://forums.halowaypoint.com/faq"), url-prefix("https://forums.halowaypoint.com/tos"), url-prefix("https://forums.halowaypoint.com/privacy") {
-/* Fix nav breaking layouts */
+/* Fix nav pills breaking some layouts */
 .nav-pills {
 	display: flex;
 }
@@ -1478,6 +1479,7 @@ tr.reviewable-score {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/about") {
+/* About */
 .about.admins .ember-view,
 .users .ember-view {
 	display: grid;
@@ -1509,7 +1511,7 @@ section.about table {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com") {
-/* General */
+/* Global */
 .alert-emails-disabled {
 	display: none;
 }
@@ -2093,6 +2095,7 @@ th.category-link:before {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/g") {
+/* Groups */
 .groups-boxes .group-box {
 	background-color: var(--primary);
 	border: none;
@@ -2423,6 +2426,7 @@ section.details h1 {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/top") {
+/* Top topics */
 .select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .date-section,
 .select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon {
 	color: var(--tertiary-medium);
@@ -2445,6 +2449,7 @@ section.details h1 {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/unread"), url-prefix("https://forums.halowaypoint.com/new") {
+/* Unread/new */
 div.education {
 	color: var(--secondary);
 	margin-bottom: 1em;
@@ -2454,6 +2459,7 @@ div.education {
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
+/* Not found - 404s, etc */
 .page-not-found-topics .popular-topics,
 .page-not-found-topics .recent-topics,
 .not-found-container .popular-topics,
@@ -2479,6 +2485,7 @@ div.education {
 }
 
 @-moz-document url("https://forums.halowaypoint.com/admin") {
+/* Admin page surround */
 .boxed.white {
 	background-color: var(--primary) !important;
 }
