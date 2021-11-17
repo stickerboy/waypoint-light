@@ -1,5 +1,5 @@
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
-/* Version: 1.0.1 */
+/* Version: 1.0.2 */
 
 
 /* Global styling */
@@ -1630,6 +1630,7 @@ tbody {
 .topic-list-item.closed .topic-status {
 	color: var(--danger-medium);
 }
+.topic-list .topic-list-data.main-link a.title, 
 .topic-list-main-link a.title,
 .topic-list .main-link a.title,
 .latest-topic-list-item .main-link a.title {
@@ -1837,9 +1838,6 @@ table th,
 }
 .user-main .about .secondary dl div {
 	padding: 0.75em;
-}
-.user-main .about .secondary dl div:nth-of-type(6) {
-	order: 1;
 }
 .user-primary-navigation .nav-pills > li {
 	margin-right: 5px;
