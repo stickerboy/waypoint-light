@@ -1,5 +1,7 @@
-/* Version: 1.0.0 */
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
+/* Version: 1.0.1 */
+
+
 /* Global styling */
 html {
 	background-color: var(--primary);
@@ -390,6 +392,21 @@ textarea {
 }
 
 /* Canned replies */
+#reply-control .canned-reply .canned-reply-title {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 8rem 2rem 1fr;
+}
+summary:before {
+	order: 2;	
+}
+#reply-control .canned-reply .canned-reply-title .canned-reply-title-text {
+    order: 3;
+}
+#reply-control .canned-reply .canned-reply-title .actions {
+    order: 1;
+	margin-left: 0;
+}
 .canned-reply-title:hover {
 	background-color: var(--tertiary-medium);
 	color: var(--primary);
@@ -884,6 +901,17 @@ table.group-members td {
 	color: var(--secondary-low-mid);
 }
 
+/* Edit title*/
+#topic-title .title-wrapper,
+#topic-title #edit-title, #topic-title .category-chooser, 
+#topic-title .edit-controls {
+    width: 100%;
+}
+#topic-title .edit-topic-title {
+	max-width: 100%;
+    width: 100%;
+}
+
 /* Post notice */
 .post-notice {
 	max-width: 100%;
@@ -1128,7 +1156,10 @@ pre > code {
 	background: var(--tertiary-low);
 	padding: 0 4px;
 }
-
+aside.onebox {
+	background-color: rgba(0,0,0,0.03);
+	border-color: var(--tertiary-medium);
+}
 .onebox.category-onebox {
 	margin-right: 24px;
 	background-color: var(--primary-very-high);
@@ -1229,7 +1260,7 @@ nav.post-controls .actions button.delete:focus .d-icon {
 }
 .archetype-private_message .topic-body .cooked {
 	font-size: var(--font-up-1);
-	background-color: var(--primary-very-high);
+/* 	background-color: var(--primary-very-high); */
 	border-color: var(--tertiary-medium);
 }
 .archetype-private_message .topic-map,
@@ -1323,6 +1354,14 @@ nav.post-controls .actions button.delete:focus .d-icon {
 .popup-menu .btn.popup-menu-btn-danger:hover .d-button-label {
 	color: var(--primary);
 }
+
+.selected-posts {
+	bottom: 10px;
+}
+.selected-posts p {
+	color: var(--primary);
+	font-size: var(--font-0);
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/notifications/[A-Za-z0-9_ ]+") {
@@ -1343,6 +1382,13 @@ a.mention:active {
 	padding: 2px 6px 1px;
 	background: var(--tertiary-low);
 	border-radius: 3px;
+}
+#banner {
+	margin-top: 1em;
+}
+.cooked, 
+.d-editor-preview {
+	letter-spacing: 0.6px;
 }
 }
 
@@ -2423,6 +2469,12 @@ section.details h1 {
 }
 .admin-contents table .client_ip {
 	word-break: break-all;
+}
+
+.display-row.highlight-danger {
+    background-color: var(--danger-low);
+    color: var(--primary);
+}
 }
 }
 
