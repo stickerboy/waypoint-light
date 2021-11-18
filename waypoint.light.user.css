@@ -3,10 +3,10 @@
 @namespace      github.com/stickerboy/waypoint-light
 @version        1.0.3
 @description    `A customized light theme for Halo Waypoint.`
-@author         stckrboy
-@updateURL      https://github.com/stckrboy/waypoint-light/raw/main/waypoint.light.css
+@author         stickerboy
+@updateURL      https://raw.githubusercontent.com/stickerboy/waypoint-light/main/waypoint.light.user.css
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
-/* Version: 1.0.2 */
+/* Version: 1.0.3 */
 
 
 /* Global styling */
