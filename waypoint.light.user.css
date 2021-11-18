@@ -1565,6 +1565,12 @@ section.about h3 {
 section.about table {
 	width: 100%;
 }
+.user-metrics .table-cell .value {
+	background: var(--primary);
+}
+.user-metrics .table-cell .label {
+	color: var(--tertiary-low);
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com") {
