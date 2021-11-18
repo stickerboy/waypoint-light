@@ -154,7 +154,28 @@ textarea {
 	color: var(--secondary);
 	font-weight: normal;
 }
-
+.user-card h1 .d-icon, 
+.group-card h1 .d-icon {
+	color: var(--quaternary);
+}
+.user-card .badge-section .user-badge, 
+.user-card .badge-section .more-user-badges a {
+	background-color: var(--primary);
+	color: var(--secondary);
+	border-color: var(--tertiary-low);
+}
+	.user-card .location-and-website .website-name a, .user-card .location-and-website .location span,
+.user-card .second-row .bio a {
+	color: var(--tertiary-medium);
+}
+.user-badge.badge-type-gold .fa, 
+	.user-card .badge-section .more-user-badges a.badge-type-gold .fa {
+    color: var(--quaternary) !important;
+}
+.user-badge.badge-type-bronze .fa, 
+.user-card .badge-section .more-user-badges a.badge-type-bronze .fa {
+    color: var(--tertiary-medium) !important;
+}
 
 /* WTF is this? */
 .discourse-tag {
