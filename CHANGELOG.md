@@ -1,4 +1,7 @@
 ### Changelog
+### 1.0.6
+* Fix additional bracket, highlighted by Stylus
+
 ### 1.0.5
 * Apply mentions styling to user activity page
 * Fix User cards
