@@ -9,12 +9,10 @@
 @author         stickerboy (http://www.kenny.cx)
 @homepageURL    https://github.com/stickerboy/waypoint-light/
 @supportURL     https://github.com/stickerboy/waypoint-light/issues
-
-
-@-moz-document url-prefix("https://forums.halowaypoint.com/") {
+==/UserStyle== */
 /* Version: 1.0.3 */
 
-
+@-moz-document url-prefix("https://forums.halowaypoint.com/") {
 /* Global styling */
 html {
 	background-color: var(--primary);
