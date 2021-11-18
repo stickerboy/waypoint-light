@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Waypoint Light
-@version        1.0.3
+@version        1.0.4
 @description    A customized light theme for Halo Waypoint.
 @updateURL      https://raw.githubusercontent.com/stickerboy/waypoint-light/main/waypoint.light.user.css
 @preprocessor   stylus
@@ -10,7 +10,7 @@
 @homepageURL    https://github.com/stickerboy/waypoint-light/
 @supportURL     https://github.com/stickerboy/waypoint-light/issues
 ==/UserStyle== */
-/* Version: 1.0.3 */
+/* Version: 1.0.4 */
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
 /* Global styling */
@@ -19,7 +19,7 @@ html {
 	color: var(--secondary);
 }
 body {
-	background: url(https://aws1.discourse-cdn.com/halowaypoint/original/1X/696fe3e….png), linear-gradient(180deg, transparent 0%, #eaecef 100%), linear-gradient(180deg, #f4f7f9 0%, #eceef1 100%)
+	background: url(https://aws1.discourse-cdn.com/halowaypoint/original/1X/696fe3e036249886cd2084697a3bb73fc58ea77c.png), linear-gradient(180deg, transparent 0%, #eaecef 100%), linear-gradient(180deg, #f4f7f9 0%, #eceef1 100%)
 }
 
 a {
