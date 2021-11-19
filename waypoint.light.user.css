@@ -253,6 +253,30 @@ textarea {
 .fullscreen-composer #reply-control.fullscreen:before {
 	background-color: var(--primary-very-high);
 }
+.similar-topics  {
+	background-color: var(--primary);
+}
+.composer-popup ul li {
+	border-bottom: 3px solid var(--tertiary-medium);
+	padding: 8px 10px;
+}
+.similar-topics a[href] {
+	color: var(--tertiary-medium);
+	font-weight: bold;
+}
+.composer-popup ul li:hover,
+.composer-popup ul li:focus,
+.composer-popup ul li:active {
+	background-color: rgba(0,0,0,0.03);
+}
+.similar-topics .search-link .blurb {
+	color: var(--tertiary-low);
+	font-size: var(--font-down-1);
+	letter-spacing: 0.6px;
+}
+.similar-topics .search-link span.topic .first-line {
+	margin-bottom: 4px;
+}
 
 .select-kit.combo-box .select-kit-header,
 .select-kit.multi-select .multi-select-header,
