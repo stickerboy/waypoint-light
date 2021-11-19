@@ -14,16 +14,16 @@ Surfaces some elements of the Discourse forums that are currently hidden on Wayp
 
 ## Installation
 Waypoint light was designed to be used with the [Stylus browser extension](https://add0n.com/stylus.html)  
-You can see the and install the style over on usertyles.world: [https://userstyles.world/style/2030/waypoint-light](https://userstyles.world/style/2030/waypoint-light)
+You can see and install the style over on usertyles.world: [https://userstyles.world/style/2030/waypoint-light](https://userstyles.world/style/2030/waypoint-light)
 
-Alternatively, assuming Styus is installed, you can click the link below:  
+Alternatively, assuming Stylus is installed, you can click the link below:  
 [https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css](https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css)
 
 ## Changelog
 Please see the [CHANGELOG.md](CHANGELOG.md) file for an in-depth list of the latest changes.
 
 ## Bugs, Issues and Support
-From time to time issus and bugs may appear, either due to forum updates or items I missed  
+From time to time issues and bugs may appear, either due to forum updates or items I missed  
 Please submit a new ticket here: [https://github.com/stickerboy/waypoint-light/issues/new](https://github.com/stickerboy/waypoint-light/issues/new)
 
 #### Forums Home page
