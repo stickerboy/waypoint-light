@@ -20,7 +20,7 @@ Alternatively, assuming Styus is installed, you can click the link below:
 [https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css](https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css)
 
 ## Changelog
-Please see the [CHANGELOG.md](CHANGELOG.md) file for an in-depth changelog
+Please see the [CHANGELOG.md](CHANGELOG.md) file for an in-depth list of the latest changes.
 
 ## Bugs, Issues and Support
 From time to time issus and bugs may appear, either due to forum updates or items I missed  
