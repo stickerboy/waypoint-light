@@ -2,15 +2,15 @@
 **A customised light theme for the Halo Waypoint forums**
 
 Surfaces some elements of the Discourse forums that are currently hidden on Waypoint and enhances some existing features:
-- “OP” badge to denote topic poster on their posts
+- Added back the “OP” badge to denote topic poster on their posts
 - “Highlighted” badge to denote a post has been specifically highlighted
 - Better highlighting for ‘closed’ topics
-- Better highlighting for ‘read’ topic
-- Better visibility of topic age within posts (like if a topic has gone 6 months without reply)
-- Improved layouts of some sections using CSS grid
-- Pushed more sections to fill the width of their containers, which looks a little neater
+- Better highlighting for ‘read’ topics
+- Made use of borders to stylize and visually separate content,
 - Spaced out posts within topics
-- User of border to stylize and visually separate content
+- Better visibility of topic age within posts (e.g. if a topic has gone 6 months without reply)
+- Improved layouts of some sections using grids
+- Pushed more sections to fill the width of their containers, which helps them to look a little neater
 
 ## Installation
 Waypoint light was designed to be used with the [Stylus browser extension](https://add0n.com/stylus.html)  
