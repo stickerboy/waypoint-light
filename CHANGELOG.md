@@ -1,4 +1,7 @@
 ### Changelog
+### 1.0.7
+* Fix styling of 'similar topics' suggestions in the post editor when creating a new topic
+
 ### 1.0.6
 * Fix additional bracket, highlighted by Stylus
 
