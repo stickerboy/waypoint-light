@@ -1447,7 +1447,7 @@ a.mention:active {
 }
 }
 
-@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/badges") {
+@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/badges"), url-prefix("https://forums.halowaypoint.com/badges") {
 /* Badges*/
 .badge-card {
 	background-color: var(--primary);
