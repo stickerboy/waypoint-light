@@ -1421,12 +1421,16 @@ nav.post-controls .actions button.delete:focus .d-icon {
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/notifications/[A-Za-z0-9_ ]+"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/activity") {
 /* Mentions & Inserts */
+a.mention-group,
 a.mention {
 	color: var(--primary);
 	padding: 2px 6px 0px;
 	background: var(--tertiary-low);
 	border-radius: 3px;
 }
+a.mention-group:hover,
+a.mention-group:focus,
+a.mention-group:active,
 a.mention:hover,
 a.mention:focus,
 a.mention:active {
