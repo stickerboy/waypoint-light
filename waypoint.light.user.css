@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Waypoint Light
-@version        1.0.7
+@version        1.0.8
 @description    A customized light theme for Halo Waypoint.
 @updateURL      https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css
 @namespace      stickerboy/waypoint-light
@@ -8,7 +8,7 @@
 @homepageURL    https://github.com/stickerboy/waypoint-light/
 @supportURL     https://github.com/stickerboy/waypoint-light/issues
 ==/UserStyle== */
-/* Version: 1.0.7 */
+/* Version: 1.0.8 */
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
 /* Global styling */
@@ -1421,12 +1421,16 @@ nav.post-controls .actions button.delete:focus .d-icon {
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/t/"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/notifications/[A-Za-z0-9_ ]+"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/activity") {
 /* Mentions & Inserts */
+a.mention-group,
 a.mention {
 	color: var(--primary);
 	padding: 2px 6px 0px;
 	background: var(--tertiary-low);
 	border-radius: 3px;
 }
+a.mention-group:hover,
+a.mention-group:focus,
+a.mention-group:active,
 a.mention:hover,
 a.mention:focus,
 a.mention:active {
@@ -1447,7 +1451,7 @@ a.mention:active {
 }
 }
 
-@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/badges") {
+@-moz-document regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/summary"), regexp("https:\\/\\/forums.halowaypoint.com\\/u\\/[A-Za-z0-9_ ]+\\/badges"), url-prefix("https://forums.halowaypoint.com/badges") {
 /* Badges*/
 .badge-card {
 	background-color: var(--primary);
@@ -1685,12 +1689,7 @@ tbody {
 .topic-statuses .topic-status {
 	margin-top: 0.3em;
 }
-.topic-list-item.closed {
-	background-color: rgba(140, 0, 8, 0.2);
-}
-.topic-list-item.closed .topic-status {
-	color: var(--danger-medium);
-}
+
 .topic-list .topic-list-data.main-link a.title, 
 .topic-list-main-link a.title,
 .topic-list .main-link a.title,
@@ -1715,6 +1714,12 @@ table th,
 .topic-list-item.visited {
 	background-color: rgba(0, 0, 0, 0.03);
 }
+.topic-list-item.closed {
+	background-color: rgba(140, 0, 8, 0.2);
+}
+.topic-list-item.closed .topic-status {
+	color: var(--danger-medium);
+}
 
 .badge-notification.new-topic::before {
 	content: "New";
@@ -1733,7 +1738,7 @@ table th,
 	font-size: var(--font-0);
 }
 
-.topic-list .topic-list-item-separator td span {
+.topic-list .topic-list-item-separator .topic-list-data span {
 	background-color: var(--danger-low-mid);
 	color: var(--primary);
 	font-size: var(--font-0);
