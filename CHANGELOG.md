@@ -1,4 +1,6 @@
 ### Changelog
+### 1.0.8
+* Fix specificity of topic status colors, so that 'closed' takes precedence over 'read'
 ### 1.0.7
 * Fix styling of 'similar topics' suggestions in the post editor when creating a new topic
 
