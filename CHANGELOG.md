@@ -3,7 +3,7 @@
 * Fix specificity of topic status colors, so that 'closed' takes precedence over 'read'
 * Fix issue with styles not being applied to main Badges page
 * Fix last visit styling on category pages
-8 Fix group mention color
+* Fix group mention color
 
 ### 1.0.7
 * Fix styling of 'similar topics' suggestions in the post editor when creating a new topic
