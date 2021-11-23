@@ -1734,7 +1734,7 @@ table th,
 	font-size: var(--font-0);
 }
 
-.topic-list .topic-list-item-separator td span {
+.topic-list .topic-list-item-separator .topic-list-data span {
 	background-color: var(--danger-low-mid);
 	color: var(--primary);
 	font-size: var(--font-0);
