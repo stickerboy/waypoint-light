@@ -1,4 +1,7 @@
 ### Changelog
+### 1.0.9
+* Fix link and category badge styling of a quoted post in a PM
+
 ### 1.0.8
 * Fix specificity of topic status colors, so that 'closed' takes precedence over 'read'
 * Fix issue with styles not being applied to main Badges page

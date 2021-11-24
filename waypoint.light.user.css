@@ -764,6 +764,16 @@ blockquote {
 	background-color: var(--primary-very-high);
 	border-left: 5px solid var(--tertiary-medium);
 }
+.quote.quote-modified img + a {
+	color:var(--primary);
+}
+.quote.quote-modified .badge-wrapper .badge-category {
+	background-color: var(--tertiary-low);
+	padding: 2px 6px 1px 6px;
+	color:var(--primary);
+	border-radius: 3px;
+}
+
 .quote-controls,
 .quote-controls .d-icon {
 	color: var(--primary);
