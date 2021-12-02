@@ -945,6 +945,8 @@ table.group-members td {
 }
 #topic-title h1 a {
 	color: var(--secondary);
+    padding: 8px 10px 4px;
+    position: relative;
 }
 .select-kit .select-kit-header {
 	height: 100%;
@@ -975,6 +977,27 @@ table.group-members td {
 #topic-title .edit-topic-title {
 	max-width: 100%;
     width: 100%;
+}
+a.edit-topic::after {
+    content: "Edit";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    background-color: teal;
+    width: 60px;
+    font-size: 14px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 3px;
+    padding: 8px;
+    z-index: 1;
+}
+#topic-title a.edit-topic .d-icon {
+    z-index: 2;
+    color: var(--primary);
+    padding: 5px;
 }
 
 /* Post notice */
