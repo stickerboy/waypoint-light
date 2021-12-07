@@ -1257,6 +1257,23 @@ aside.onebox .onebox-body a[href] {
 	color: var(--quaternary);
 }
 
+/* Polls */
+div.poll li[data-poll-option-id] {
+	color: var(--tertiary-low);
+}
+div.poll .results .percentage,
+div.poll .poll-info {
+	color: var(--tertiary-low);
+}
+div.poll .results .bar {
+	background-color: var(--tertiary-low);
+}
+div.poll .results .bar-back {
+	background-color: rgb(34 132 151 / 15%);
+}
+div.poll .results .chosen .bar {
+	background-color: var(--tertiary-low-or-tertiary-high)
+}
 
 /* Post controls */
 .nav.post-controls .actions button.create {
