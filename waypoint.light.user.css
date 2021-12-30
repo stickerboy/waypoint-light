@@ -867,9 +867,10 @@ span.highlighted {
 .user-secondary-navigation .nav-stacked a {
 	color: var(--secondary-very-high);
 }
-.user-secondary-navigation .nav-stacked a:hover,
-.user-secondary-navigation .nav-stacked a:active,
-.user-secondary-navigation .nav-stacked a:focus,
+.user-secondary-navigation .nav-stacked li:hover,
+.user-secondary-navigation .nav-stacked li:active,
+.user-secondary-navigation .nav-stacked li:focus,
+.user-secondary-navigation .nav-stacked li.active,
 .user-secondary-navigation .nav-stacked a.active {
 	background-color: rgba(0, 0, 0, 0.05);
 	color: var(--tertiary-medium);
