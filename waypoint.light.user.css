@@ -1223,6 +1223,49 @@ a.edit-topic::after {
 	color: var(--primary);
 }
 
+/* PMs */
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked {
+	background: var(--tertiary-medium);
+	color: var(--primary);
+	font-size: var(--font-up-1);
+}
+.archetype-private_message .topic-body .cooked {
+	font-size: var(--font-up-1);
+/* 	background-color: var(--primary-very-high); */
+	border-color: var(--tertiary-medium);
+}
+.archetype-private_message .topic-map,
+.archetype-private_message .topic-body .cooked,
+.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked,
+.archetype-private_message .topic-map .participants .user,
+.archetype-private_message .map:first-of-type .buttons .btn {
+	border-radius: 0;
+}
+.archetype-private_message .topic-map {
+	padding: 0;
+}
+.topic-map .participants .user .user-link,
+.topic-map .participants .user .group-link {
+	color: var(--secondary);
+}
+.archetype-private_message .topic-map .participants .user {
+	background-color: var(--primary-very-high);
+}
+.topic-map .participants .user .user-link:hover,
+.topic-map .participants .user .group-link:hover {
+	color: var(--tertiary-medium);
+}
+.archetype-private_message .topic-map .participants .user {
+	padding: 4px;
+}
+.topic-map .information {
+	color: var(--secondary);
+	border: 2px solid var(--tertiary-medium);
+}
+.topic-map-post.last-reply span.relative-date {
+	color: var(--tertiary-medium);
+}
+
 /* Post content*/
 .moderator .regular > .cooked {
 	background-color: var(--tertiary-high);
@@ -1357,49 +1400,6 @@ nav.post-controls .actions button.delete:focus .d-icon {
 #topic-footer-buttons .pinned-button .reason,
 #topic-footer-buttons .topic-notifications-button .reason {
 	color: var(--tertiary-low);
-}
-
-/* PMs */
-.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked {
-	background: var(--tertiary-medium);
-	color: var(--primary);
-	font-size: var(--font-up-1);
-}
-.archetype-private_message .topic-body .cooked {
-	font-size: var(--font-up-1);
-/* 	background-color: var(--primary-very-high); */
-	border-color: var(--tertiary-medium);
-}
-.archetype-private_message .topic-map,
-.archetype-private_message .topic-body .cooked,
-.archetype-private_message .current-user-post:not(.moderator) .topic-body .cooked,
-.archetype-private_message .topic-map .participants .user,
-.archetype-private_message .map:first-of-type .buttons .btn {
-	border-radius: 0;
-}
-.archetype-private_message .topic-map {
-	padding: 0;
-}
-.topic-map .participants .user .user-link,
-.topic-map .participants .user .group-link {
-	color: var(--secondary);
-}
-.archetype-private_message .topic-map .participants .user {
-	background-color: var(--primary-very-high);
-}
-.topic-map .participants .user .user-link:hover,
-.topic-map .participants .user .group-link:hover {
-	color: var(--tertiary-medium);
-}
-.archetype-private_message .topic-map .participants .user {
-	padding: 4px;
-}
-.topic-map .information {
-	color: var(--secondary);
-	border: 2px solid var(--tertiary-medium);
-}
-.topic-map-post.last-reply span.relative-date {
-	color: var(--tertiary-medium);
 }
 
 

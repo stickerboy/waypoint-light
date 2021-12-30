@@ -5,6 +5,7 @@
 * Increased size of Save edit / cancel buttons when editing a topic title
 * Fix text and option colors for Polls
 * Fix background highlight on secondary navigation
+* Fix post highlight for moderators in PMs
 * Minor change to unread notification size on topics
 
 ### 1.0.8
