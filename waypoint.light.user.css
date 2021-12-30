@@ -194,6 +194,7 @@ textarea {
 	background-color: var(--tertiary-high);
 	font-weight: bold;
 	border-radius: 3px;
+	line-height: 1.2;
 }
 
 /* Filters and dropdowns */

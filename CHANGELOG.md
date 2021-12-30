@@ -4,6 +4,7 @@
 * Restyled edit topic title icon to make it easier to click on
 * Increased size of Save edit / cancel buttons when editing a topic title
 * Fix text and option colors for Polls
+* Minor change to unread notification size on topics
 
 ### 1.0.8
 * Fix specificity of topic status colors, so that 'closed' takes precedence over 'read'
