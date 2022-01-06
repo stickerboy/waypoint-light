@@ -1009,8 +1009,15 @@ a.edit-topic::after {
 	background-color: var(--tertiary-medium);
 	color: var(--primary);
 }
+.post-notice.old {
+    background-color: rgba(0,0,0,0.07);
+    color: var(--tertiary-low);
+}
 .post-notice .d-icon {
 	color: var(--primary);
+}
+.post-notice.old .d-icon {
+    color: var(--tertiary-medium);
 }
 
 /* Hidden replies */

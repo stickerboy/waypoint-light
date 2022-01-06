@@ -6,6 +6,7 @@
 * Fix text and option colors for Polls
 * Fix background highlight on secondary navigation
 * Fix post highlight for moderators in PMs
+* Adjust post notice styling for old posts
 * Minor change to unread notification size on topics
 
 ### 1.0.8
