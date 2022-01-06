@@ -1019,6 +1019,10 @@ a.edit-topic::after {
 .post-notice.old .d-icon {
     color: var(--tertiary-medium);
 }
+.archetype-private_message .post-notice {
+	margin-left: 0;
+	border-radius: 0;
+}
 
 /* Hidden replies */
 .gap {
