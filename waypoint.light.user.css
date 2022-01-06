@@ -2668,4 +2668,45 @@ div.education {
 .boxed.white {
 	background-color: var(--primary) !important;
 }
+.user-metrics .table-cell {
+	border: 1px solid;
+}
+.user-metrics .table-cell .label {
+	color: var(--tertiary-medium);
+}
+.user-metrics .table-cell .value {
+	background: var(--tertiary-or-tertiary-low);
+	color: var(--primary);
+}
+.user-metrics .table-cell.user-basic,
+.user-metrics .table-cell.user-basic {
+	background: var(--primary);
+	color: var(--tertiary-low);
+}
+.user-metrics .table-cell.user-member {
+	background: var(--primary-high);
+	color: var(--tertiary-low);
+}
+.user-metrics .table-cell.user-leader {
+	background: var(--quaternary);
+}
+.user-metrics .table-cell.user-regular {
+	background: var(--tertiary-medium);
+}
+.user-metrics .table-cell.user-regular .label,
+.user-metrics .table-cell.user-leader .label {
+	color: var(--primary);
+}
+.user-metrics .table-cell.user-admins .label .d-icon {
+	color: var(--love);
+}
+.user-metrics .table-cell.user-moderators .label .d-icon {
+	color: var(--quaternary);
+}
+.user-metrics .table-cell.user-suspended .label .d-icon {
+	color: var(--danger-medium);
+}
+.user-metrics .table-cell.user-silenced .label .d-icon {
+	color: var(--primary-high);
+}
 }
