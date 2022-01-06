@@ -1162,7 +1162,7 @@ a.edit-topic::after {
 	align-items: baseline;
 	color: var(--primary);
 	background-color: var(--quaternary);
-	padding: 0;
+	padding: 0 0.4em;
 	border-radius: 0.25em;
 	font-weight: normal;
 	width: auto;
