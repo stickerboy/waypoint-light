@@ -7,6 +7,7 @@
 * Fix background highlight on secondary navigation
 * Fix post highlight for moderators in PMs
 * Fix badge styling for additional user levels
+* Fix text colors in user list filter dropdown
 * Fix user metrics styling in admin area
 * Adjust post notice styling for old posts
 * Minor change to unread notification size on topics

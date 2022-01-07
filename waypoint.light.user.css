@@ -2266,6 +2266,17 @@ th.category-link:before {
 	font-weight: bold;
 	color: var(--tertiary-medium);
 }
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .date-section,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row .date-section {
+	color: var(--tertiary-medium);
+}
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .date-section,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .date-section, 
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-highlighted .top-date-string,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row.is-selected .top-date-string {
+	color: var(--primary);
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/g") {
