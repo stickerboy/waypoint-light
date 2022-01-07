@@ -1104,11 +1104,14 @@ a.edit-topic::after {
 	margin-bottom: 20px;
 }
 .small-action .small-action-desc.timegap {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: var(--font-up-1);
-	padding: 0.8em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-0);
+    padding: 0.6em 0.8em;
+    margin-bottom: -1px;
+    color: var(--primary);
+    background-color: var(--tertiary-medium);
 }
 .time-gap .topic-avatar {
 	display: none;
