@@ -9,6 +9,7 @@
 * Fix badge styling for additional user levels
 * Fix text colors in user list filter dropdown
 * Fix user metrics styling in admin area
+* Adjust row highlight colors on userlist table
 * Adjust post notice styling for old posts
 * Minor change to unread notification size on topics
 

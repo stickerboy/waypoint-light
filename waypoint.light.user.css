@@ -854,6 +854,16 @@ span.highlighted {
 	padding: 1em;
 	border-bottom: 3px solid var(--tertiary-medium);
 }
+.directory .me {
+	background-color: var(--tertiary-high);
+}
+.directory .me .username a, 
+.directory .me .name a, 
+.directory .me .title, 
+.directory .me .number, 
+.directory .me .time-read {
+	color: var(--primary);
+}
 }
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/g/"), url-prefix("https://forums.halowaypoint.com/u/") {
