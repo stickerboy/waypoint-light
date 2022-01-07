@@ -861,7 +861,8 @@ span.highlighted {
 .directory .me .name a, 
 .directory .me .title, 
 .directory .me .number, 
-.directory .me .time-read {
+.directory .me .time-read,
+.directory .me .user-field-value {
 	color: var(--primary);
 }
 }
