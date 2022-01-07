@@ -1,4 +1,18 @@
 ### Changelog
+### 1.0.9
+* Fix link and category badge styling of a quoted post in a PM
+* Restyled edit topic title icon to make it easier to click on
+* Increased size of Save edit / cancel buttons when editing a topic title
+* Fix text and option colors for Polls
+* Fix background highlight on secondary navigation
+* Fix post highlight for moderators in PMs
+* Fix badge styling for additional user levels
+* Fix text colors in user list filter dropdown
+* Fix user metrics styling in admin area
+* Adjust row highlight colors on userlist table
+* Adjust post notice styling for old posts
+* Minor change to unread notification size on topics
+
 ### 1.0.8
 * Fix specificity of topic status colors, so that 'closed' takes precedence over 'read'
 * Fix issue with styles not being applied to main Badges page
