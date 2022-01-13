@@ -102,7 +102,9 @@ textarea {
 /* Search */
 .halo-custom-navigation-search .search-menu,
 .halo-custom-navigation-search .search-menu .results {
-	background-color: var(--primary)
+	background-color: var(--primary);
+	border-bottom: 3px solid var(--tertiary-medium);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .search-menu .results .label-suffix {
 	color: var(--primary-low-mid-or-secondary-high);
