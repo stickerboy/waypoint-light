@@ -2,6 +2,7 @@
 ### 1.0.10
 * Fix styling for timegap: notification shown under a post that has a large break between it and the preceding post
 * Fix link styling in certain alerts
+* Fix font color of search results title in dropdown
 
 ### 1.0.9
 * Fix link and category badge styling of a quoted post in a PM

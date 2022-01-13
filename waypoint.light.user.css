@@ -112,6 +112,9 @@ textarea {
 	background-color: var(--primary);
 	color: var(--tertiary-medium);
 }
+.search-menu .search-link .topic-title {
+	color: var(--tertiary-medium);
+}
 
 /* Alert */
 .alert.alert-info {
