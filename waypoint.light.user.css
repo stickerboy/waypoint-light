@@ -117,8 +117,12 @@ textarea {
 .alert.alert-info {
 	background-color: var(--tertiary-medium);
 }
-.alert.alert-info.clickable {
+.alert.alert-info.clickable,
+.alert.alert-info a {
 	color: var(--primary);
+}
+.alert.alert-info a {
+	text-decoration: underline;
 }
 
 /* User card */
