@@ -3,6 +3,7 @@
 * Fix styling for timegap: notification shown under a post that has a large break between it and the preceding post
 * Fix link styling in certain alerts
 * Fix font color of search results title in dropdown
+* Fix hover state colors for search filter dropdown items
 * Make search results dropdown a little more prominent / easier to view when open
 
 ### 1.0.9

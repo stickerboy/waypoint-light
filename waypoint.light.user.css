@@ -111,8 +111,25 @@ textarea {
 }
 .search-menu .search-link:focus,
 .search-menu .search-link:hover {
-	background-color: var(--primary);
-	color: var(--tertiary-medium);
+	background-color: var(--tertiary-medium);
+	color: var(--primary);
+}
+
+.search-menu .search-link:focus .badge-wrapper .badge-category .category-name,
+.search-menu .search-link:hover .badge-wrapper .badge-category .category-name,
+.search-menu .results .search-menu-assistant .search-link:hover,
+.search-menu .results .search-menu-assistant .search-link:focus,
+.search-menu .results .search-menu-initial-options .search-link:hover .label-suffix,
+.search-menu .results .search-menu-initial-options .search-link:focus .label-suffix,
+.search-menu .results .search-menu-initial-options .search-link:hover .extra-hint,
+.search-menu .results .search-menu-initial-options .search-link:focus .extra-hint {
+	color: var(--primary);
+}
+.search-menu .search-link:focus .topic-title,
+.search-menu .search-link:hover .topic-title,
+.search-menu .search-link:focus .blurb,
+.search-menu .search-link:hover .blurb {
+	color: var(--primary-very-high);
 }
 .search-menu .search-link .topic-title {
 	color: var(--tertiary-medium);
