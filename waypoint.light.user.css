@@ -100,7 +100,6 @@ textarea {
 }
 
 /* Search */
-.halo-custom-navigation-search .search-menu,
 .halo-custom-navigation-search .search-menu .results {
 	background-color: var(--primary);
 	border-bottom: 3px solid var(--tertiary-medium);
