@@ -5,6 +5,7 @@
 * Fix font color of search results title in dropdown
 * Fix hover state colors for search filter dropdown items
 * Make search results dropdown a little more prominent / easier to view when open
+* Added additional styling for admin-only sections
 
 ### 1.0.9
 * Fix link and category badge styling of a quoted post in a PM
