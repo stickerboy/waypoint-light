@@ -520,10 +520,10 @@ summary:before {
 	margin-bottom: 9px;
 }
 
-
-
-
-
+.timeline-container .topic-timeline .timeline-scroller-content {
+    box-sizing: content-box;
+    overflow: visible;
+}
 
 /* Butons */
 .btn {
