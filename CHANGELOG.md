@@ -6,6 +6,7 @@
 * Fix hover state colors for search filter dropdown items
 * Make search results dropdown a little more prominent / easier to view when open
 * Added additional styling for admin-only sections
+* Fix background color and icon spacing of nav pills in post revision modal
 
 ### 1.0.9
 * Fix link and category badge styling of a quoted post in a PM

@@ -272,6 +272,9 @@ textarea {
 .nav-pills .drop li:focus a {
 	color: var(--primary);
 }
+.nav-pills > li a .d-icon {
+	margin-right: 5px;
+}
 
 /* Posting editor */
 #reply-control {
@@ -569,6 +572,9 @@ summary:before {
 }
 .modal.has-tabs .modal-tabs .modal-tab.is-active.single-tab {
 	color: var(--secondary);
+}
+.modal .nav {
+    background-color: transparent;
 }
 .bootbox.modal {
 	background-color: var(--primary);
