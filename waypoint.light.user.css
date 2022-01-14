@@ -231,6 +231,7 @@ textarea {
 #navigation-bar .navigation-toggle {
 	background-color: var(--primary);
 	border: 1px solid var(--secondary);
+	margin-bottom: 0;
 }
 .nav-pills > li > a {
 	color: var(--secondary);

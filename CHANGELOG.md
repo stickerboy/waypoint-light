@@ -6,6 +6,7 @@
 * Fix hover state colors for search filter dropdown items
 * Fix icon color on post composer fullscreen and minimise buttons
 * Fix overflow issue on topic timeline scroller
+* Uniform sizing of navigation/filter dropdowns
 * Make search results dropdown a little more prominent / easier to view when open
 * Added additional styling for admin-only sections
 * Fix background color and icon spacing of nav pills in post revision modal
