@@ -1,4 +1,17 @@
 ### Changelog
+### 1.0.10
+* Fix styling for timegap: notification shown under a post that has a large break between it and the preceding post
+* Fix link styling in certain alerts
+* Fix font color of search results title in dropdown
+* Fix hover state colors for search filter dropdown items
+* Fix icon color on post composer fullscreen and minimise buttons
+* Fix overflow issue on topic timeline scroller
+* Uniform sizing of navigation/filter dropdowns
+* Fix styling os sticky header when bulk updating topics
+* Make search results dropdown a little more prominent / easier to view when open
+* Added additional styling for admin-only sections
+* Fix background color and icon spacing of nav pills in post revision modal
+
 ### 1.0.9
 * Fix link and category badge styling of a quoted post in a PM
 * Restyled edit topic title icon to make it easier to click on
