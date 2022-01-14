@@ -367,6 +367,9 @@ textarea {
 #reply-control .reply-to .composer-controls .btn {
 	border-radius: 0;
 }
+#reply-control .reply-to .composer-controls .d-icon {
+	color: var(--primary);
+}
 
 .select-kit.single-select.dropdown-select-box .select-kit-row.is-highlighted .texts .name,
 .select-kit.single-select.dropdown-select-box .select-kit-row.is-selected .texts .name,
