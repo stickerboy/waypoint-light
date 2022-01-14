@@ -276,6 +276,16 @@ textarea {
 	margin-right: 5px;
 }
 
+.sticky-header .topic-list-header {
+	background: var(--tertiary-medium);
+}
+.topic-list .topic-list-data.bulk-select {
+	text-align: center;
+}
+.sticky-header .topic-list-header .topic-list-data {
+	color: var(--primary);
+}
+
 /* Posting editor */
 #reply-control {
 	background-color: var(--primary);
