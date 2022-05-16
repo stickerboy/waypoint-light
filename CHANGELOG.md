@@ -1,4 +1,18 @@
 ### Changelog
+### 1.0.11
+* Update styling for header and menu links
+    - Change header background to white and decresed opacity
+    - Change menu link colors for standard, active, hover and focus states
+* Update hamburger active state colors
+* Update review and forum notifications
+    - Shift review notifications to the side increased padding
+    - Change forum notification color and add a small border for better highlighting
+* Update font colors and sizes for category text and labels for readability
+* Update styling for post count inside topic map
+* Add separator between each category in the header
+* Fix table heading and text colors inside tables on moderator posts
+* Fix highlight in topic timer modal
+
 ### 1.0.10
 * Fix styling for timegap: notification shown under a post that has a large break between it and the preceding post
 * Fix link styling in certain alerts
