@@ -1425,6 +1425,20 @@ table.group-members td {
 		border: 2px solid var(--tertiary-low-or-tertiary-high);
 	}
 
+	/* Tables */
+	.cooked table thead th, 
+	.d-editor-preview table thead th {
+		color: var(--tertiary-or-tertiary-low);
+	}
+
+	.cooked a {
+		color: var(--tertiary-400);
+		text-decoration: underline;
+	}
+	.cooked a:visited {
+		color: var(--tertiary-600);
+	}
+
 	/* Topic map - below post */
 	.topic-map {
 		background: var(--primary);
