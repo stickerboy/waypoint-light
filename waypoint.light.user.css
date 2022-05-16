@@ -54,6 +54,46 @@
 		padding-bottom: 4em;
 	}
 
+	.d-header {
+		background-color: rgb(255 255 255 / 95%);
+	}
+	@media screen and (min-width: 850px) {
+		.halo-menu-links-item .menu-header,
+		.halo-menu-links-item a {
+    		color: var(--primary-200);
+		}
+		.halo-menu-links-item {
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+		.halo-menu-links-item .menu-header:focus {
+			background-color: var(--tertiary-400);
+		}
+		.halo-menu-links-item:hover,
+		.halo-menu-links-item:active, 
+		.halo-menu-links-item:focus {
+			background-color: var(--tertiary-300);
+		}
+		.halo-menu-links-item {
+			padding: 0;
+		}
+		.halo-menu-links-item-link,
+		.halo-menu-links-item .menu-header {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			padding: 0 2em;
+		}
+		.halo-menu-links-item-submenu {
+			background-color: var(--tertiary-100);
+		}
+		.halo-menu-links-item-submenu-links-item a:hover {
+			background-color: var(--tertiary-300);
+		}
+		.halo-menu-links-item-submenu-links-item a {
+   			padding: 1em 2em;
+		}
+	}
 	/* Empty state */
 	.empty-state {
 		color: var(--secondary);
