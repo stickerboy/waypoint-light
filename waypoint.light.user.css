@@ -1026,6 +1026,13 @@ table.group-members td {
 		color: var(--secondary-low-mid);
 	}
 
+	span.post-count {
+		background: var(--tertiary-700);
+		color: var(--primary);
+		opacity: 1;
+		border: 2px solid var(--primary);
+	}
+
 	/* Edit title*/
 	#topic-title .title-wrapper,
 	#topic-title #edit-title, #topic-title .category-chooser, 
