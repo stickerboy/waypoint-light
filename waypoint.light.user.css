@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Waypoint Light
-@version        1.0.11
+@version        1.0.12
 @description    A customized light theme for Halo Waypoint.
 @updateURL      https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css
 @namespace      stickerboy/waypoint-light
@@ -8,7 +8,7 @@
 @homepageURL    https://github.com/stickerboy/waypoint-light/
 @supportURL     https://github.com/stickerboy/waypoint-light/issues
 ==/UserStyle== */
-/* Version: 1.0.11 */
+/* Version: 1.0.12 */
 
 @-moz-document url-prefix("https://forums.halowaypoint.com/") {
 	/* Global styling */
@@ -155,6 +155,12 @@
 		color: var(--primary);
 	}
 
+	.extra-info-wrapper .topic-link {
+		color: var(--header_background);
+	}
+	.extra-info-wrapper .categories-wrapper .category-name {
+		color: var(--tertiary-300);
+	}
 	.categories-wrapper .category-name::after {
 		content: "/";
 		position: relative;
@@ -1940,6 +1946,12 @@ table.group-members td {
 	.latest-topic-list-item.visited a.title:not(.badge-notification),
 	.category-topic-link.visited a.title:not(.badge-notification) {
 		color: var(--primary-low-mid);
+	}
+	.topic-list .topic-list-item.closed a.title {
+		color: var(--danger-medium) !important;
+	}
+	.topic-list .topic-list-item.closed.visited a.title {
+		color: var(--danger-low-mid) !important;
 	}
 	.topic-list-item.visited:hover,
 	.topic-list-item.visited:active,

@@ -1,4 +1,8 @@
 ### Changelog
+### 1.0.12
+* Fix header and header category text colors
+* Add better text colors for locked topics
+
 ### 1.0.11
 * Update styling for header and menu links
     - Change header background to white and decresed opacity
