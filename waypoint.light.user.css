@@ -1166,6 +1166,14 @@ table.group-members td {
 	.topic-timer-info:empty {
 		border: 0;
 	}
+	#topic-timer-modal .tap-tile-grid .tap-tile .d-icon {
+		color: var(--tertiary-low);
+	}
+	#topic-timer-modal .tap-tile-grid .tap-tile:hover .d-icon,
+	#topic-timer-modal .tap-tile-grid .tap-tile:active .d-icon,
+	#topic-timer-modal .tap-tile-grid .tap-tile:focus .d-icon {
+		color: var(--primary);
+	}
 
 	#topic-title .edit-topic-title .mini-tag-chooser {
 		margin-left: 0;
