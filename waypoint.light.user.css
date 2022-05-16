@@ -656,6 +656,34 @@
 
 
 	/* Forum menu */
+	.drop-down-mode .d-header-icons .active .icon {
+	    background-color: var(--primary);
+		border-top: 1px solid var(--primary);
+		border-left: 1px solid var(--primary);
+		border-right: 1px solid var(--primary);
+	}
+	.drop-down-mode .d-header-icons .active .icon .d-icon {
+		color: var(--tertiary-900);
+	}
+	
+	.d-header-icons .badge-notification.reviewables {
+		left: -36px;
+    	top: 10px;
+		min-width: 1.2em;
+		border-radius: 3px;
+		display: flex;
+		padding: 0.75em 0.5em 0.5em;
+		height: 1em;
+		align-items: center;
+		color: var(--primary);
+	}
+	.d-header-icons .unread-notifications {
+	    background-color: var(--quaternary);
+		color: var(--primary);
+		padding-top: 4px;
+		border: 2px solid var(--primary);
+	}
+	
 	.menu-panel {
 		background-color: var(--primary);
 	}
@@ -666,6 +694,9 @@
 	.menu-panel li.category-link a:hover .category-name,
 	.menu-panel li.category-link a:focus .category-name {
 		color: var(--tertiary-medium);
+	}
+	.menu-panel .widget-link{
+		position: relative;
 	}
 	.menu-panel .widget-link:hover,
 	.menu-panel .widget-link:focus,
@@ -685,6 +716,9 @@
 		color: var(--primary);
 	}
 	.panel-body .badge-notification.reviewables {
+		position: absolute;
+		right: 0.5em;
+		top: 0.5em;
 		color: var(--primary);
 		border-radius: 0;
 		padding: 0.25em 0.42em 0.18em;
