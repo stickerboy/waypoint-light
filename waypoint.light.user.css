@@ -155,6 +155,12 @@
 		color: var(--primary);
 	}
 
+	.extra-info-wrapper .topic-link {
+		color: var(--header_background);
+	}
+	.extra-info-wrapper .categories-wrapper .category-name {
+		color: var(--tertiary-300);
+	}
 	.categories-wrapper .category-name::after {
 		content: "/";
 		position: relative;
@@ -1940,6 +1946,12 @@ table.group-members td {
 	.latest-topic-list-item.visited a.title:not(.badge-notification),
 	.category-topic-link.visited a.title:not(.badge-notification) {
 		color: var(--primary-low-mid);
+	}
+	.topic-list .topic-list-item.closed a.title {
+		color: var(--danger-medium) !important;
+	}
+	.topic-list .topic-list-item.closed.visited a.title {
+		color: var(--danger-low-mid) !important;
 	}
 	.topic-list-item.visited:hover,
 	.topic-list-item.visited:active,
