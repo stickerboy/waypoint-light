@@ -1,6 +1,12 @@
 # Waypoint light
 **A customised light theme for the Halo Waypoint forums**
 
+**THIS THEME HAS NOW BEEN ARCHIVED**
+
+As of March 2023, the Halo Waypoint forums were closed and this theme was removed from User Styles and archived.
+
+---
+
 Surfaces some elements of the Discourse forums that are currently hidden on Waypoint and enhances some existing features:
 - Added back the “OP” badge to denote topic poster on their posts
 - “Highlighted” badge to denote a post has been specifically highlighted
@@ -14,7 +20,7 @@ Surfaces some elements of the Discourse forums that are currently hidden on Wayp
 
 ## Installation
 Waypoint light was designed to be used with the [Stylus browser extension](https://add0n.com/stylus.html)  
-You can see and install the style over on usertyles.world: [https://userstyles.world/style/2030/waypoint-light](https://userstyles.world/style/2030/waypoint-light)
+You can see and install the style over on usertyles.world: **link removed as style has been taken down**
 
 Alternatively, assuming Stylus is installed, you can click the link below:  
 [https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css](https://github.com/stickerboy/waypoint-light/raw/main/waypoint.light.user.css)
@@ -23,8 +29,7 @@ Alternatively, assuming Stylus is installed, you can click the link below:
 Please see the [CHANGELOG.md](CHANGELOG.md) file for an in-depth list of the latest changes.
 
 ## Bugs, Issues and Support
-From time to time issues and bugs may appear, either due to forum updates or items I missed  
-Please submit a new ticket here: [https://github.com/stickerboy/waypoint-light/issues/new](https://github.com/stickerboy/waypoint-light/issues/new)
+Ticket submissions are closed
 
 #### Forums Home page
 ![Home page preview](https://raw.githubusercontent.com/stickerboy/waypoint-light/main/img/homepage.jpg)
